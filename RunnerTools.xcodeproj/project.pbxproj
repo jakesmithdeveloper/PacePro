@@ -13,6 +13,10 @@
 		87B9AB6128DB52A100233CA6 /* DateResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B9AB6028DB52A100233CA6 /* DateResult.swift */; };
 		87D23E1528DCA4F7006EE1A3 /* StartDateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87D23E1428DCA4F7006EE1A3 /* StartDateView.swift */; };
 		87D23E1728DCB253006EE1A3 /* RaceDateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87D23E1628DCB253006EE1A3 /* RaceDateView.swift */; };
+		87D23E1A28DCD31E006EE1A3 /* Pace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87D23E1928DCD31E006EE1A3 /* Pace.swift */; };
+		87D23E1C28DCD657006EE1A3 /* PaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87D23E1B28DCD657006EE1A3 /* PaceView.swift */; };
+		87D23E1E28DCD65F006EE1A3 /* PaceView-ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87D23E1D28DCD65F006EE1A3 /* PaceView-ViewModel.swift */; };
+		87D23E2028DCDB70006EE1A3 /* GoalPaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87D23E1F28DCDB70006EE1A3 /* GoalPaceView.swift */; };
 		87DF7EA728D90D65003D7E9F /* RunnerToolsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DF7EA628D90D65003D7E9F /* RunnerToolsApp.swift */; };
 		87DF7EA928D90D65003D7E9F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DF7EA828D90D65003D7E9F /* ContentView.swift */; };
 		87DF7EAB28D90D65003D7E9F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87DF7EAA28D90D65003D7E9F /* Assets.xcassets */; };
@@ -26,6 +30,10 @@
 		87B9AB6028DB52A100233CA6 /* DateResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateResult.swift; sourceTree = "<group>"; };
 		87D23E1428DCA4F7006EE1A3 /* StartDateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartDateView.swift; sourceTree = "<group>"; };
 		87D23E1628DCB253006EE1A3 /* RaceDateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceDateView.swift; sourceTree = "<group>"; };
+		87D23E1928DCD31E006EE1A3 /* Pace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pace.swift; sourceTree = "<group>"; };
+		87D23E1B28DCD657006EE1A3 /* PaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaceView.swift; sourceTree = "<group>"; };
+		87D23E1D28DCD65F006EE1A3 /* PaceView-ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PaceView-ViewModel.swift"; sourceTree = "<group>"; };
+		87D23E1F28DCDB70006EE1A3 /* GoalPaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalPaceView.swift; sourceTree = "<group>"; };
 		87DF7EA328D90D65003D7E9F /* RunnerTools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RunnerTools.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		87DF7EA628D90D65003D7E9F /* RunnerToolsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunnerToolsApp.swift; sourceTree = "<group>"; };
 		87DF7EA828D90D65003D7E9F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -48,8 +56,10 @@
 			isa = PBXGroup;
 			children = (
 				87DF7EA828D90D65003D7E9F /* ContentView.swift */,
-				87D23E1828DCB5F5006EE1A3 /* Date Calculations */,
 				87ADFE2B28DB4A8500B24A8C /* CenteredButtonView.swift */,
+				87D23E1828DCB5F5006EE1A3 /* DateViews */,
+				87D23E1B28DCD657006EE1A3 /* PaceView.swift */,
+				87D23E1F28DCDB70006EE1A3 /* GoalPaceView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -58,6 +68,7 @@
 			isa = PBXGroup;
 			children = (
 				87B9AB6028DB52A100233CA6 /* DateResult.swift */,
+				87D23E1928DCD31E006EE1A3 /* Pace.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -65,11 +76,12 @@
 		87ADFE2628DA435A00B24A8C /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				87D23E1D28DCD65F006EE1A3 /* PaceView-ViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
-		87D23E1828DCB5F5006EE1A3 /* Date Calculations */ = {
+		87D23E1828DCB5F5006EE1A3 /* DateViews */ = {
 			isa = PBXGroup;
 			children = (
 				87ADFE2728DA44B000B24A8C /* DateCalculatorView.swift */,
@@ -77,7 +89,7 @@
 				87D23E1428DCA4F7006EE1A3 /* StartDateView.swift */,
 				87D23E1628DCB253006EE1A3 /* RaceDateView.swift */,
 			);
-			path = "Date Calculations";
+			path = DateViews;
 			sourceTree = "<group>";
 		};
 		87DF7E9A28D90D65003D7E9F = {
@@ -187,11 +199,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				87D23E2028DCDB70006EE1A3 /* GoalPaceView.swift in Sources */,
+				87D23E1E28DCD65F006EE1A3 /* PaceView-ViewModel.swift in Sources */,
 				87ADFE2C28DB4A8500B24A8C /* CenteredButtonView.swift in Sources */,
+				87D23E1C28DCD657006EE1A3 /* PaceView.swift in Sources */,
 				87D23E1728DCB253006EE1A3 /* RaceDateView.swift in Sources */,
 				87ADFE2A28DB475C00B24A8C /* TrainingBlockLengthView.swift in Sources */,
 				87ADFE2828DA44B000B24A8C /* DateCalculatorView.swift in Sources */,
 				87DF7EA928D90D65003D7E9F /* ContentView.swift in Sources */,
+				87D23E1A28DCD31E006EE1A3 /* Pace.swift in Sources */,
 				87B9AB6128DB52A100233CA6 /* DateResult.swift in Sources */,
 				87DF7EA728D90D65003D7E9F /* RunnerToolsApp.swift in Sources */,
 				87D23E1528DCA4F7006EE1A3 /* StartDateView.swift in Sources */,

@@ -15,7 +15,7 @@ struct ContentView: View {
                     Label("Races", systemImage: "list.dash")
                 }
             
-            Text("Pace")
+            PaceView()
                 .tabItem {
                     Label("Pace", systemImage: "speedometer")
                 }
