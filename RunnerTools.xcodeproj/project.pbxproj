@@ -52,15 +52,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		87A9969628DD15AF00EA335F /* Pacing Calculator Views */ = {
+			isa = PBXGroup;
+			children = (
+				87D23E1B28DCD657006EE1A3 /* PaceView.swift */,
+				87D23E1F28DCDB70006EE1A3 /* GoalPaceView.swift */,
+				87A9969428DD114900EA335F /* GoalTimeView.swift */,
+			);
+			path = "Pacing Calculator Views";
+			sourceTree = "<group>";
+		};
 		87ADFE2428DA434900B24A8C /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				87DF7EA828D90D65003D7E9F /* ContentView.swift */,
 				87ADFE2B28DB4A8500B24A8C /* CenteredButtonView.swift */,
 				87D23E1828DCB5F5006EE1A3 /* DateViews */,
-				87D23E1B28DCD657006EE1A3 /* PaceView.swift */,
-				87D23E1F28DCDB70006EE1A3 /* GoalPaceView.swift */,
-				87A9969428DD114900EA335F /* GoalTimeView.swift */,
+				87A9969628DD15AF00EA335F /* Pacing Calculator Views */,
 			);
 			path = Views;
 			sourceTree = "<group>";
