@@ -18,7 +18,7 @@ struct PaceView: View {
                         Label("Goal Pace", systemImage: "figure.walk")
                     }
                     NavigationLink {
-                        Text("Goal Time")
+                        GoalTimeView()
                     } label: {
                         Label("Goal Time", systemImage: "timer.square")
                     }
