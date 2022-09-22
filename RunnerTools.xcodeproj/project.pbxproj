@@ -48,10 +48,7 @@
 			isa = PBXGroup;
 			children = (
 				87DF7EA828D90D65003D7E9F /* ContentView.swift */,
-				87ADFE2728DA44B000B24A8C /* DateCalculatorView.swift */,
-				87ADFE2928DB475C00B24A8C /* TrainingBlockLengthView.swift */,
-				87D23E1428DCA4F7006EE1A3 /* StartDateView.swift */,
-				87D23E1628DCB253006EE1A3 /* RaceDateView.swift */,
+				87D23E1828DCB5F5006EE1A3 /* Date Calculations */,
 				87ADFE2B28DB4A8500B24A8C /* CenteredButtonView.swift */,
 			);
 			path = Views;
@@ -70,6 +67,17 @@
 			children = (
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		87D23E1828DCB5F5006EE1A3 /* Date Calculations */ = {
+			isa = PBXGroup;
+			children = (
+				87ADFE2728DA44B000B24A8C /* DateCalculatorView.swift */,
+				87ADFE2928DB475C00B24A8C /* TrainingBlockLengthView.swift */,
+				87D23E1428DCA4F7006EE1A3 /* StartDateView.swift */,
+				87D23E1628DCB253006EE1A3 /* RaceDateView.swift */,
+			);
+			path = "Date Calculations";
 			sourceTree = "<group>";
 		};
 		87DF7E9A28D90D65003D7E9F = {

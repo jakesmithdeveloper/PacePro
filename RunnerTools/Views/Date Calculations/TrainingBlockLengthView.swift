@@ -12,7 +12,9 @@ struct TrainingBlockLengthView: View {
     @State private var startDate = Date()
     @State private var raceDate = Date()
     
-    @State private var dateResult: DateResult = DateResult(weeks: nil, days: nil, hours: nil)
+    var dateResult: DateResult {
+        compute(start: startDate, end: raceDate)
+    }
     
     var body: some View {
         Form {
@@ -21,9 +23,6 @@ struct TrainingBlockLengthView: View {
                     .datePickerStyle(.compact)
                 DatePicker("Race Date", selection: $raceDate, displayedComponents: [.date])
                     .datePickerStyle(.compact)
-                CenteredButtonView(title: "Compute") {
-                    dateResult = compute(start: startDate, end: raceDate)
-                }
             }
             
             Section("result") {
