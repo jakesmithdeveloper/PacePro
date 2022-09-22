@@ -9,7 +9,7 @@ import SwiftUI
 
 struct DateCalculatorView: View {
     
-    @State private var showDetails = false
+    @State private var showDetails = true
     
     var body: some View {
         NavigationView {
@@ -22,13 +22,13 @@ struct DateCalculatorView: View {
                     }
                     
                     NavigationLink {
-                        Text("Start date")
+                        StartDateView()
                     } label: {
                         Label("Start Date", systemImage: "forward.fill")
                     }
                     
                     NavigationLink {
-                        Text("Race Date")
+                        RaceDateView()
                     } label: {
                         Label("Race Date", systemImage: "flag.circle")
                     }
