@@ -8,9 +8,13 @@
 import SwiftUI
 
 struct PaceView: View {
+    
+    @Environment(\.colorScheme) var colorScheme
+    
     var body: some View {
         NavigationView {
             VStack {
+                Spacer()
                 Group {
                     NavigationLink {
                         GoalPaceView()
@@ -23,7 +27,7 @@ struct PaceView: View {
                         Label("Goal Time", systemImage: "timer.square")
                     }
                 }
-                .foregroundColor(.blue)
+                .foregroundColor(colorScheme == .dark ? .primary : .blue)
                 .padding(20)
                 .font(.title)
                 .overlay {
@@ -31,7 +35,10 @@ struct PaceView: View {
                         .stroke(.blue, lineWidth: 5)
                 }
                 .padding()
+                Spacer()
+                Spacer()
             }
+            .navigationTitle("Choose a Calculator")
         }
     }
 }

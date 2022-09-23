@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		87A4A53028DD4AC3006D91A1 /* Pace-ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A4A52F28DD4AC3006D91A1 /* Pace-ViewModel.swift */; };
 		87A9969528DD114900EA335F /* GoalTimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A9969428DD114900EA335F /* GoalTimeView.swift */; };
 		87ADFE2828DA44B000B24A8C /* DateCalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87ADFE2728DA44B000B24A8C /* DateCalculatorView.swift */; };
 		87ADFE2A28DB475C00B24A8C /* TrainingBlockLengthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87ADFE2928DB475C00B24A8C /* TrainingBlockLengthView.swift */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		87A4A52F28DD4AC3006D91A1 /* Pace-ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Pace-ViewModel.swift"; sourceTree = "<group>"; };
 		87A9969428DD114900EA335F /* GoalTimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalTimeView.swift; sourceTree = "<group>"; };
 		87ADFE2728DA44B000B24A8C /* DateCalculatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateCalculatorView.swift; sourceTree = "<group>"; };
 		87ADFE2928DB475C00B24A8C /* TrainingBlockLengthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingBlockLengthView.swift; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 		87ADFE2628DA435A00B24A8C /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				87A4A52F28DD4AC3006D91A1 /* Pace-ViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -208,6 +211,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				87D23E2028DCDB70006EE1A3 /* GoalPaceView.swift in Sources */,
+				87A4A53028DD4AC3006D91A1 /* Pace-ViewModel.swift in Sources */,
 				87ADFE2C28DB4A8500B24A8C /* CenteredButtonView.swift in Sources */,
 				87A9969528DD114900EA335F /* GoalTimeView.swift in Sources */,
 				87D23E1C28DCD657006EE1A3 /* PaceView.swift in Sources */,
