@@ -9,6 +9,8 @@ import SwiftUI
 
 struct DateCalculatorView: View {
 
+    @Environment(\.colorScheme) var colorScheme
+    
     var body: some View {
         NavigationView {
             VStack(alignment: .leading) {
@@ -17,6 +19,7 @@ struct DateCalculatorView: View {
                     TrainingBlockLengthView()
                 } label: {
                     Label("Training Block Length", systemImage: "calendar.circle")
+                        .foregroundColor(colorScheme == .dark ? .primary : .blue)
                 }
                 .font(.title)
                 .padding()
@@ -36,6 +39,7 @@ struct DateCalculatorView: View {
                     StartDateView()
                 } label: {
                     Label("Start Date", systemImage: "forward.fill")
+                        .foregroundColor(colorScheme == .dark ? .primary : .blue)
                 }
                 .font(.title)
                 .padding()
@@ -57,6 +61,7 @@ struct DateCalculatorView: View {
                     RaceDateView()
                 } label: {
                     Label("Race Date", systemImage: "flag.circle")
+                        .foregroundColor(colorScheme == .dark ? .primary : .blue)
                 }
                 .font(.title)
                 .padding()
