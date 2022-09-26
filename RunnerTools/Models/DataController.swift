@@ -34,6 +34,10 @@ class DataController: ObservableObject {
             race.date = Calendar.current.date(byAdding: .day, value: i, to: Date())
         }
         
+        let race = Race(context: viewContext)
+        race.date = Calendar.current.date(from: DateComponents(year: 2022, month: 3, day: 5))!
+        race.name = "Attack Addiction 5k"
+        
         try viewContext.save()
     }
     

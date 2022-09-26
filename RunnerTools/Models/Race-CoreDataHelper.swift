@@ -13,7 +13,7 @@ extension Race {
     }
     
     var raceDate: Date {
-        date ?? Date()
+        date ?? Calendar.current.startOfDay(for:Date())
     }
     
     var raceDateString: String? {

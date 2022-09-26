@@ -11,25 +11,45 @@ struct RacesListView: View {
     
     @EnvironmentObject var dataController: DataController
     
-    let races: FetchRequest<Race>
+    let upcommingRaces: FetchRequest<Race>
+    let pastRaces: FetchRequest<Race>
     
     @State private var raceStack: [Race] = []
     
     var body: some View {
         NavigationStack(path: $raceStack) {
             List {
-                ForEach(races.wrappedValue) { race in
-                    NavigationLink(race.raceName, value: race)
-                }
-                .onDelete { offsets in
-                    for offset in offsets {
-                        let race = races.wrappedValue[offset]
-                        dataController.delete(race)
+                if upcommingRaces.wrappedValue.count > 0 {
+                    Section("Upcomming Races") {
+                        ForEach(upcommingRaces.wrappedValue) { race in
+                            NavigationLink("\(race.raceName) (\(race.raceDateString!))", value: race)
+                        }
+                        .onDelete { offsets in
+                            for offset in offsets {
+                                let race = upcommingRaces.wrappedValue[offset]
+                                dataController.delete(race)
+                            }
+                            dataController.save()
+                        }
                     }
-                    dataController.save()
+                }
+                
+                if pastRaces.wrappedValue.count > 0 {
+                    Section("Past Races") {
+                        ForEach(pastRaces.wrappedValue) { race in
+                            NavigationLink(race.raceName, value: race)
+                        }
+                        .onDelete { offsets in
+                            for offset in offsets {
+                                let race = pastRaces.wrappedValue[offset]
+                                dataController.delete(race)
+                            }
+                            dataController.save()
+                        }
+                    }                    
                 }
             }
-            .navigationTitle("Upcomming Races")
+            .navigationTitle("Races")
             .toolbar {
                 Button {
                     let race = Race(context: dataController.container.viewContext)
@@ -39,13 +59,20 @@ struct RacesListView: View {
                 }
             }
             .navigationDestination(for: Race.self) { race in
-                RaceView(race: race)
+                RaceEditView(race: race)
+                    .toolbar {
+                        Button("done") {
+                            raceStack = [Race]()
+                        }
+                    }
             }
         }
     }
     
     init() {
-        races = FetchRequest<Race>(entity: Race.entity(), sortDescriptors: [NSSortDescriptor(keyPath: \Race.date, ascending: true)])
+        upcommingRaces = FetchRequest<Race>(entity: Race.entity(), sortDescriptors: [NSSortDescriptor(keyPath: \Race.date, ascending: true)], predicate: NSPredicate(format: "date > %@", argumentArray: [Date()]))
+        
+        pastRaces = FetchRequest<Race>(entity: Race.entity(), sortDescriptors: [NSSortDescriptor(keyPath: \Race.date, ascending: true)], predicate: NSPredicate(format: "date <= %@", argumentArray: [Calendar.current.startOfDay(for: Date())]))
     }
 }
 
