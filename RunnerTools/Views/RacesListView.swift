@@ -13,21 +13,33 @@ struct RacesListView: View {
     
     let races: FetchRequest<Race>
     
+    @State private var raceStack: [Race] = []
+    
     var body: some View {
-        NavigationView {
+        NavigationStack(path: $raceStack) {
             List {
                 ForEach(races.wrappedValue) { race in
-                    Text(race.name ?? "")
+                    NavigationLink(race.raceName, value: race)
+                }
+                .onDelete { offsets in
+                    for offset in offsets {
+                        let race = races.wrappedValue[offset]
+                        dataController.delete(race)
+                    }
+                    dataController.save()
                 }
             }
             .navigationTitle("Upcomming Races")
             .toolbar {
                 Button {
-                    // do something
+                    let race = Race(context: dataController.container.viewContext)
+                    raceStack.append(race)
                 } label: {
                     Label("add", systemImage: "plus")
                 }
-
+            }
+            .navigationDestination(for: Race.self) { race in
+                RaceView(race: race)
             }
         }
     }
