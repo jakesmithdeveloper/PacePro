@@ -8,6 +8,8 @@
 import Foundation
 
 extension Race {
+    
+    // Nil coalescessors
     var raceName: String {
         name ?? "New Race"
     }
@@ -16,6 +18,19 @@ extension Race {
         date ?? Calendar.current.startOfDay(for:Date())
     }
     
+    var raceDistance: Double {
+        distance
+    }
+    
+    var raceWebsite: String {
+        website ?? ""
+    }
+    
+    var raceUnit: String {
+        unit ?? "miles"
+    }
+    
+    // Display Strings
     var raceDateString: String? {
         let df = DateFormatter()
         df.dateStyle = .medium
@@ -28,8 +43,8 @@ extension Race {
         let context = controller.container.viewContext
         
         let race = Race(context: context)
-        race.name = "2022 Dogfish Dash"
-        race.date = Date()
+        race.name = "Dogfish Dash"
+        race.date = Calendar.current.date(from: DateComponents(year: 2022, month: 9, day: 25))
         return race
     }
 }

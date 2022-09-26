@@ -8,43 +8,45 @@
 import SwiftUI
 
 struct RaceEditView: View {
+    
     @EnvironmentObject var dataController: DataController
+
+    @StateObject var vm: ViewModel
     
-    let race: Race
-    
-    @State private var name: String
-    @State private var date: Date
+    @FocusState private var keyboardFocused: Bool
     
     var body: some View {
-        Form {
-            Section("Race Information") {
-                TextField("race name", text: $name.onChange({
-                    update()
-                }))
-                DatePicker("race date", selection: $date.onChange {
-                    update()
-                }, displayedComponents: [.date])
-                .datePickerStyle(.compact)
+        VStack {
+            Form {
+                Section("Race Information") {
+                    TextFieldWithText(userInput: $vm.name.onChange {
+                        vm.update()
+                    }, prompt: "Race Name:")
+                    DatePicker("race date", selection: $vm.date.onChange {
+                        vm.update()
+                    }, displayedComponents: [.date])
+                    .datePickerStyle(.compact)
+                    TextField("Race Website", text: $vm.website.onChange {
+                        vm.update()
+                    })
+                        .focused($keyboardFocused)
+                    if vm.date > Date() {
+                        Text("Countdown: \(vm.countdownString)")
+                    }
+                }
             }
+            
         }
         .onDisappear {
             dataController.save()
         }
-        .navigationTitle("\(race.raceName)")
+        .navigationTitle("\(vm.raceYearString) \(vm.race.raceName)")
     }
     
     init(race: Race) {
-        self.race = race
-        _name = State(wrappedValue: race.raceName)
-        _date = State(wrappedValue: race.raceDate)
+        _vm = StateObject(wrappedValue: ViewModel(race: race))
     }
     
-    func update() {
-        race.objectWillChange.send()
-        
-        race.name = name
-        race.date = date
-    }
 }
 
 struct RaceView_Previews: PreviewProvider {

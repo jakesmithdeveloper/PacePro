@@ -11,14 +11,17 @@ struct RacesListView: View {
     
     @EnvironmentObject var dataController: DataController
     
+    // Fetch requests for upcomming and past races
     let upcommingRaces: FetchRequest<Race>
     let pastRaces: FetchRequest<Race>
     
+    // Race path array for programatically navigations with the new Navigation Stack
     @State private var raceStack: [Race] = []
     
     var body: some View {
         NavigationStack(path: $raceStack) {
             List {
+                // Display races that haven't happened yet if there are any available
                 if upcommingRaces.wrappedValue.count > 0 {
                     Section("Upcomming Races") {
                         ForEach(upcommingRaces.wrappedValue) { race in
@@ -34,6 +37,7 @@ struct RacesListView: View {
                     }
                 }
                 
+                // Display races that have happened if there are any available
                 if pastRaces.wrappedValue.count > 0 {
                     Section("Past Races") {
                         ForEach(pastRaces.wrappedValue) { race in
@@ -58,9 +62,11 @@ struct RacesListView: View {
                     Label("add", systemImage: "plus")
                 }
             }
+            // New NavigationStack syntax
             .navigationDestination(for: Race.self) { race in
                 RaceEditView(race: race)
                     .toolbar {
+                        // add a done button to pop the edit race view
                         Button("done") {
                             raceStack = [Race]()
                         }
