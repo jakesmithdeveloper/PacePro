@@ -9,6 +9,7 @@ import SwiftUI
 
 struct GoalTimeView: View {
     
+    @FocusState private var keyboardIsFocused: Bool
     @ObservedObject var vm = PaceViewModel()
     
     var body: some View {
@@ -16,6 +17,7 @@ struct GoalTimeView: View {
             Section("User Input") {
                 TextField("distance", text: $vm.distanceInput)
                     .keyboardType(.decimalPad)
+                    .focused($keyboardIsFocused)
                 Picker("Distance Type", selection: $vm.inputUnit) {
                     ForEach(vm.units, id: \.self) {
                         Text("\($0)s")
@@ -30,6 +32,7 @@ struct GoalTimeView: View {
                         Text("/ \(vm.outputUnit)")
                     }
                     .keyboardType(.numberPad)
+                    .focused($keyboardIsFocused)
                 }
                 Picker("Distance Type", selection: $vm.outputUnit) {
                     ForEach(vm.units, id: \.self) {
@@ -40,6 +43,14 @@ struct GoalTimeView: View {
             }
             Section("output") {
                 Text("\(vm.goalTimeResult)")
+            }
+        }
+        .navigationTitle("Finish Time Calculator")
+        .toolbar {
+            ToolbarItem(placement: .keyboard) {
+                Button("done") {
+                    keyboardIsFocused = false
+                }
             }
         }
     }

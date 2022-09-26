@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		87297C9928DDF142001550C1 /* Main.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 87297C9728DDF142001550C1 /* Main.xcdatamodeld */; };
+		87297C9B28DDF18A001550C1 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87297C9A28DDF18A001550C1 /* DataController.swift */; };
+		87297C9D28DDF468001550C1 /* RacesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87297C9C28DDF468001550C1 /* RacesListView.swift */; };
+		878D5AEF28E148BC007F2BE7 /* RaceEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878D5AEE28E148BC007F2BE7 /* RaceEditView.swift */; };
+		878D5AF128E14958007F2BE7 /* Race-CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878D5AF028E14958007F2BE7 /* Race-CoreDataHelper.swift */; };
 		87A4A53028DD4AC3006D91A1 /* Pace-ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A4A52F28DD4AC3006D91A1 /* Pace-ViewModel.swift */; };
 		87A9969528DD114900EA335F /* GoalTimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A9969428DD114900EA335F /* GoalTimeView.swift */; };
 		87ADFE2828DA44B000B24A8C /* DateCalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87ADFE2728DA44B000B24A8C /* DateCalculatorView.swift */; };
@@ -22,9 +27,17 @@
 		87DF7EA928D90D65003D7E9F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DF7EA828D90D65003D7E9F /* ContentView.swift */; };
 		87DF7EAB28D90D65003D7E9F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87DF7EAA28D90D65003D7E9F /* Assets.xcassets */; };
 		87DF7EAE28D90D65003D7E9F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87DF7EAD28D90D65003D7E9F /* Preview Assets.xcassets */; };
+		87E599BB28E1DC890083E1C3 /* Binding-OnChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E599BA28E1DC890083E1C3 /* Binding-OnChange.swift */; };
+		87F3E94728E23435008C630F /* TextFieldWithText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F3E94628E23435008C630F /* TextFieldWithText.swift */; };
+		87F3E94928E2542B008C630F /* RaceEdit-ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F3E94828E2542B008C630F /* RaceEdit-ViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		87297C9828DDF142001550C1 /* Main.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Main.xcdatamodel; sourceTree = "<group>"; };
+		87297C9A28DDF18A001550C1 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
+		87297C9C28DDF468001550C1 /* RacesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RacesListView.swift; sourceTree = "<group>"; };
+		878D5AEE28E148BC007F2BE7 /* RaceEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceEditView.swift; sourceTree = "<group>"; };
+		878D5AF028E14958007F2BE7 /* Race-CoreDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Race-CoreDataHelper.swift"; sourceTree = "<group>"; };
 		87A4A52F28DD4AC3006D91A1 /* Pace-ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Pace-ViewModel.swift"; sourceTree = "<group>"; };
 		87A9969428DD114900EA335F /* GoalTimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalTimeView.swift; sourceTree = "<group>"; };
 		87ADFE2728DA44B000B24A8C /* DateCalculatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateCalculatorView.swift; sourceTree = "<group>"; };
@@ -41,6 +54,9 @@
 		87DF7EA828D90D65003D7E9F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		87DF7EAA28D90D65003D7E9F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		87DF7EAD28D90D65003D7E9F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		87E599BA28E1DC890083E1C3 /* Binding-OnChange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Binding-OnChange.swift"; sourceTree = "<group>"; };
+		87F3E94628E23435008C630F /* TextFieldWithText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldWithText.swift; sourceTree = "<group>"; };
+		87F3E94828E2542B008C630F /* RaceEdit-ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RaceEdit-ViewModel.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +70,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		87297C9628DDF126001550C1 /* utility views */ = {
+			isa = PBXGroup;
+			children = (
+				87F3E94628E23435008C630F /* TextFieldWithText.swift */,
+				87ADFE2B28DB4A8500B24A8C /* CenteredButtonView.swift */,
+			);
+			path = "utility views";
+			sourceTree = "<group>";
+		};
 		87A9969628DD15AF00EA335F /* Pacing Calculator Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -68,7 +93,9 @@
 			isa = PBXGroup;
 			children = (
 				87DF7EA828D90D65003D7E9F /* ContentView.swift */,
-				87ADFE2B28DB4A8500B24A8C /* CenteredButtonView.swift */,
+				87297C9C28DDF468001550C1 /* RacesListView.swift */,
+				878D5AEE28E148BC007F2BE7 /* RaceEditView.swift */,
+				87297C9628DDF126001550C1 /* utility views */,
 				87D23E1828DCB5F5006EE1A3 /* DateViews */,
 				87A9969628DD15AF00EA335F /* Pacing Calculator Views */,
 			);
@@ -78,8 +105,12 @@
 		87ADFE2528DA435200B24A8C /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				87E599BA28E1DC890083E1C3 /* Binding-OnChange.swift */,
 				87B9AB6028DB52A100233CA6 /* DateResult.swift */,
+				87297C9728DDF142001550C1 /* Main.xcdatamodeld */,
 				87D23E1928DCD31E006EE1A3 /* Pace.swift */,
+				878D5AF028E14958007F2BE7 /* Race-CoreDataHelper.swift */,
+				87297C9A28DDF18A001550C1 /* DataController.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -88,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				87A4A52F28DD4AC3006D91A1 /* Pace-ViewModel.swift */,
+				87F3E94828E2542B008C630F /* RaceEdit-ViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -211,14 +243,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				87D23E2028DCDB70006EE1A3 /* GoalPaceView.swift in Sources */,
+				878D5AF128E14958007F2BE7 /* Race-CoreDataHelper.swift in Sources */,
 				87A4A53028DD4AC3006D91A1 /* Pace-ViewModel.swift in Sources */,
+				87E599BB28E1DC890083E1C3 /* Binding-OnChange.swift in Sources */,
 				87ADFE2C28DB4A8500B24A8C /* CenteredButtonView.swift in Sources */,
+				87297C9D28DDF468001550C1 /* RacesListView.swift in Sources */,
 				87A9969528DD114900EA335F /* GoalTimeView.swift in Sources */,
+				87297C9928DDF142001550C1 /* Main.xcdatamodeld in Sources */,
 				87D23E1C28DCD657006EE1A3 /* PaceView.swift in Sources */,
+				87F3E94928E2542B008C630F /* RaceEdit-ViewModel.swift in Sources */,
 				87D23E1728DCB253006EE1A3 /* RaceDateView.swift in Sources */,
+				878D5AEF28E148BC007F2BE7 /* RaceEditView.swift in Sources */,
 				87ADFE2A28DB475C00B24A8C /* TrainingBlockLengthView.swift in Sources */,
+				87F3E94728E23435008C630F /* TextFieldWithText.swift in Sources */,
 				87ADFE2828DA44B000B24A8C /* DateCalculatorView.swift in Sources */,
 				87DF7EA928D90D65003D7E9F /* ContentView.swift in Sources */,
+				87297C9B28DDF18A001550C1 /* DataController.swift in Sources */,
 				87D23E1A28DCD31E006EE1A3 /* Pace.swift in Sources */,
 				87B9AB6128DB52A100233CA6 /* DateResult.swift in Sources */,
 				87DF7EA728D90D65003D7E9F /* RunnerToolsApp.swift in Sources */,
@@ -359,6 +399,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -388,6 +429,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -423,6 +465,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		87297C9728DDF142001550C1 /* Main.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				87297C9828DDF142001550C1 /* Main.xcdatamodel */,
+			);
+			currentVersion = 87297C9828DDF142001550C1 /* Main.xcdatamodel */;
+			path = Main.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 87DF7E9B28D90D65003D7E9F /* Project object */;
 }
