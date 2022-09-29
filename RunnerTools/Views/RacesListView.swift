@@ -20,37 +20,50 @@ struct RacesListView: View {
     
     var body: some View {
         NavigationStack(path: $raceStack) {
-            List {
-                // Display races that haven't happened yet if there are any available
-                if upcommingRaces.wrappedValue.count > 0 {
-                    Section("Upcomming Races") {
-                        ForEach(upcommingRaces.wrappedValue) { race in
-                            NavigationLink("\(race.raceName) (\(race.raceDateString!))", value: race)
-                        }
-                        .onDelete { offsets in
-                            for offset in offsets {
-                                let race = upcommingRaces.wrappedValue[offset]
-                                dataController.delete(race)
+            Group {
+                if upcommingRaces.wrappedValue.count > 0 || pastRaces.wrappedValue.count > 0 {
+                    List {
+                        // Display races that haven't happened yet if there are any available
+                        if upcommingRaces.wrappedValue.count > 0 {
+                            Section("Upcomming Races") {
+                                ForEach(upcommingRaces.wrappedValue) { race in
+                                    NavigationLink("\(race.raceName) (\(race.raceDateString!))", value: race)
+                                        .lineLimit(1)
+                                }
+                                .onDelete { offsets in
+                                    for offset in offsets {
+                                        let race = upcommingRaces.wrappedValue[offset]
+                                        dataController.delete(race)
+                                    }
+                                    dataController.save()
+                                }
                             }
-                            dataController.save()
+                        }
+                        
+                        // Display races that have happened if there are any available
+                        if pastRaces.wrappedValue.count > 0 {
+                            Section("Past Races") {
+                                ForEach(pastRaces.wrappedValue) { race in
+                                    NavigationLink(race.raceName, value: race)
+                                }
+                                .onDelete { offsets in
+                                    for offset in offsets {
+                                        let race = pastRaces.wrappedValue[offset]
+                                        dataController.delete(race)
+                                    }
+                                    dataController.save()
+                                }
+                            }
                         }
                     }
-                }
-                
-                // Display races that have happened if there are any available
-                if pastRaces.wrappedValue.count > 0 {
-                    Section("Past Races") {
-                        ForEach(pastRaces.wrappedValue) { race in
-                            NavigationLink(race.raceName, value: race)
+                } else {
+                    Group {
+                        VStack {
+                            Text("no races on the books!")
+                            Text("add one to start tracking")
                         }
-                        .onDelete { offsets in
-                            for offset in offsets {
-                                let race = pastRaces.wrappedValue[offset]
-                                dataController.delete(race)
-                            }
-                            dataController.save()
-                        }
-                    }                    
+                    }
+                    .foregroundColor(.secondary)
                 }
             }
             .navigationTitle("Races")

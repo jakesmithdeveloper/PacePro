@@ -15,6 +15,7 @@ struct GoalTimeView: View {
     var body: some View {
         Form {
             Section("User Input") {
+                PresetDistanceView(vm: vm)
                 TextField("distance", text: $vm.distanceInput)
                     .keyboardType(.decimalPad)
                     .focused($keyboardIsFocused)
@@ -25,6 +26,8 @@ struct GoalTimeView: View {
                 }
                 .pickerStyle(.segmented)
                 HStack {
+                    Text("Average Pace:")
+                        .font(.caption)
                     Group {
                         TextField("hours", text: $vm.hoursIput)
                         TextField("minutes", text:$vm.minutesInput)
@@ -58,6 +61,8 @@ struct GoalTimeView: View {
 
 struct GoalTimeView_Previews: PreviewProvider {
     static var previews: some View {
-        GoalTimeView()
+        NavigationView {
+            GoalTimeView()            
+        }
     }
 }

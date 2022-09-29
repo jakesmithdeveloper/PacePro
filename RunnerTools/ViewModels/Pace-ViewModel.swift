@@ -20,6 +20,11 @@ class PaceViewModel: ObservableObject {
     @Published var minutesInput = ""
     @Published var secondsIput = ""
     
+    func setDistanceInput(distance: String, inputUnit: String) {
+        self.inputUnit = inputUnit
+        self.distanceInput = distance
+    }
+    
     var hours: Int {
         Int(hoursIput) ?? 0
     }

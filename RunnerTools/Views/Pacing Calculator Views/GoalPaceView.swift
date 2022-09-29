@@ -11,10 +11,11 @@ struct GoalPaceView: View {
     
     @FocusState private var keyboardFocus: Bool
     @ObservedObject var vm = PaceViewModel()
-
+    
     var body: some View {
         Form {
             Section("User Input") {
+                PresetDistanceView(vm: vm)
                 TextField("distance", text: $vm.distanceInput)
                     .keyboardType(.decimalPad)
                     .focused($keyboardFocus)
@@ -25,6 +26,8 @@ struct GoalPaceView: View {
                 }
                 .pickerStyle(.segmented)
                 HStack {
+                    Text("finish time:")
+                        .font(.caption)
                     Group {
                         TextField("hours", text: $vm.hoursIput)
                         TextField("minutes", text:$vm.minutesInput)
@@ -52,11 +55,14 @@ struct GoalPaceView: View {
                 }
             }
         }
+        .navigationTitle("Goal Pace Calculator")
     }
 }
 
 struct GoalPaceView_Previews: PreviewProvider {
     static var previews: some View {
-        GoalPaceView()
+        NavigationView {
+            GoalPaceView()
+        }
     }
 }
