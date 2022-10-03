@@ -25,6 +25,13 @@ struct RaceDateView: View {
                         .focused($trainingBlockIsFocused)
                 }
             }
+            
+            if vm.raceDateResult != "" {
+                Section("Calendar") {
+                    CalendarView(start: vm.startDate, end: vm.computeRaceDate(startDate: vm.startDate, trainingLength: Int(vm.trainingBlockLength)!)!)
+                }
+            }
+            
             Section("Output") {
                 Text("Race Date: \(vm.raceDateResult)")
             }
