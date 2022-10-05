@@ -28,6 +28,7 @@ struct MonthPicker: View {
                     // nothing
                 } label: {
                     Image(systemName: "arrow.left")
+                        .font(.largeTitle)
                 }
                 .onTapGesture {
                     withAnimation {
@@ -36,10 +37,12 @@ struct MonthPicker: View {
                 }
                 Text(vm.monthYearAsString())
                     .frame(maxWidth: .infinity)
+                    .font(.title)
                 Button{
                     // do nothing
                 } label: {
                     Image(systemName: "arrow.right")
+                        .font(.largeTitle)
                 }
                 .onTapGesture {
                     withAnimation {

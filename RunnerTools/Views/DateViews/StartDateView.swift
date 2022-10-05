@@ -11,7 +11,6 @@ struct StartDateView: View {
     
     @StateObject private var vm = DateCalculatorViewModel()
     
-    @FocusState private var trainingBlockIsFocused: Bool
     
     var body: some View {
         Form {
@@ -22,8 +21,13 @@ struct StartDateView: View {
                     Text("training plan length:")
                     TextField("Training Plan Length", text: $vm.trainingBlockLength, prompt: Text("(weeks)"))
                         .keyboardType(.numberPad)
-                        .focused($trainingBlockIsFocused)
                 }
+            }
+
+            Section("Training Start Date") {
+                Text("Start Date: \(vm.startDateResult)")
+                    .font(.title3)
+                    .bold()
             }
             
             if vm.startDateResult != "" {
@@ -32,18 +36,9 @@ struct StartDateView: View {
                 }
             }
             
-            Section("Output") {
-                Text("Start Date: \(vm.startDateResult)")
-            }
         }
+        .scrollDismissesKeyboard(.immediately)
         .navigationTitle("Start Date")
-        .toolbar {
-            ToolbarItemGroup(placement: .keyboard) {
-                Button("done") {
-                    trainingBlockIsFocused = false
-                }
-            }
-        }
     }
 }
 

@@ -15,18 +15,29 @@ struct PaceView: View {
         NavigationView {
             VStack {
                 Spacer()
-                Group {
-                    NavigationLink {
-                        GoalPaceView()
-                    } label: {
-                        Label("Goal Pace", systemImage: "figure.walk")
-                    }
-                    NavigationLink {
-                        GoalTimeView()
-                    } label: {
-                        Label("Goal Time", systemImage: "timer.square")
-                    }
+                NavigationLink {
+                    GoalPaceView()
+                } label: {
+                    Label("Goal Pace", systemImage: "figure.walk")
                 }
+                .bold()
+                .foregroundColor(colorScheme == .dark ? .primary : .blue)
+                .padding(20)
+                .font(.title)
+                .overlay {
+                    RoundedRectangle(cornerRadius: 20)
+                        .stroke(.blue, lineWidth: 5)
+                }
+                .padding()
+                Text("Or")
+                    .font(.title)
+                    .bold()
+                NavigationLink {
+                    GoalTimeView()
+                } label: {
+                    Label("Finish Time", systemImage: "timer.square")
+                }
+                .bold()
                 .foregroundColor(colorScheme == .dark ? .primary : .blue)
                 .padding(20)
                 .font(.title)
@@ -38,7 +49,7 @@ struct PaceView: View {
                 Spacer()
                 Spacer()
             }
-            .navigationTitle("Choose a Calculator")
+            .navigationTitle("Choose to calculate")
         }
     }
 }

@@ -11,8 +11,6 @@ struct RaceDateView: View {
     
     @StateObject private var vm = DateCalculatorViewModel()
     
-    @FocusState private var trainingBlockIsFocused: Bool
-    
     var body: some View {
         Form {
             Section("User Input") {
@@ -22,28 +20,24 @@ struct RaceDateView: View {
                     Text("training plan length:")
                     TextField("Training Plan Length", text: $vm.trainingBlockLength, prompt: Text("(weeks)"))
                         .keyboardType(.numberPad)
-                        .focused($trainingBlockIsFocused)
                 }
             }
             
+            Section("Race Date") {
+                Text("Race Date: \(vm.raceDateResult)")
+                    .font(.title3)
+                    .bold()
+            }
+
             if vm.raceDateResult != "" {
                 Section("Calendar") {
                     CalendarView(start: vm.startDate, end: vm.computeRaceDate(startDate: vm.startDate, trainingLength: Int(vm.trainingBlockLength)!)!)
                 }
             }
             
-            Section("Output") {
-                Text("Race Date: \(vm.raceDateResult)")
-            }
         }
+        .scrollDismissesKeyboard(.immediately)
         .navigationTitle("Race Date")
-        .toolbar {
-            ToolbarItemGroup(placement: .keyboard) {
-                Button("done") {
-                    trainingBlockIsFocused = false
-                }
-            }
-        }
     }
 }
 

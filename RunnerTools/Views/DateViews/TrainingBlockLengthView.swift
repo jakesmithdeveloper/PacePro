@@ -22,7 +22,7 @@ struct TrainingBlockLengthView: View {
                 }
 
                 Section("Training Block Length") {
-                    Text("\(vm.trainingBlockResult.dateResultString)")
+                    Text("\(vm.startDate <= vm.raceDate ? vm.trainingBlockResult.dateResultString : "Race date must be later than start date")")
                         .font(.title3)
                         .bold()
                 }

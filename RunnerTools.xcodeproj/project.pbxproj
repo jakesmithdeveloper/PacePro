@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		87061F3128EC5E73009FE969 /* OpenGraphData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87061F3028EC5E73009FE969 /* OpenGraphData.swift */; };
 		87297C9928DDF142001550C1 /* Main.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 87297C9728DDF142001550C1 /* Main.xcdatamodeld */; };
 		87297C9B28DDF18A001550C1 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87297C9A28DDF18A001550C1 /* DataController.swift */; };
 		87297C9D28DDF468001550C1 /* RacesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87297C9C28DDF468001550C1 /* RacesListView.swift */; };
@@ -25,6 +26,7 @@
 		87B22E9B28EB1DB4002404C9 /* CalendarCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B22E9A28EB1DB4002404C9 /* CalendarCellView.swift */; };
 		87B22E9D28EB36D2002404C9 /* CalendarKeyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B22E9C28EB36D2002404C9 /* CalendarKeyView.swift */; };
 		87B9AB6128DB52A100233CA6 /* DateResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B9AB6028DB52A100233CA6 /* DateResult.swift */; };
+		87C0AF9028EB595E00839FF4 /* RaceDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C0AF8F28EB595E00839FF4 /* RaceDetailView.swift */; };
 		87D23E1528DCA4F7006EE1A3 /* StartDateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87D23E1428DCA4F7006EE1A3 /* StartDateView.swift */; };
 		87D23E1728DCB253006EE1A3 /* RaceDateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87D23E1628DCB253006EE1A3 /* RaceDateView.swift */; };
 		87D23E1A28DCD31E006EE1A3 /* Pace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87D23E1928DCD31E006EE1A3 /* Pace.swift */; };
@@ -40,6 +42,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		87061F3028EC5E73009FE969 /* OpenGraphData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenGraphData.swift; sourceTree = "<group>"; };
 		87297C9828DDF142001550C1 /* Main.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Main.xcdatamodel; sourceTree = "<group>"; };
 		87297C9A28DDF18A001550C1 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		87297C9C28DDF468001550C1 /* RacesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RacesListView.swift; sourceTree = "<group>"; };
@@ -58,6 +61,7 @@
 		87B22E9A28EB1DB4002404C9 /* CalendarCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCellView.swift; sourceTree = "<group>"; };
 		87B22E9C28EB36D2002404C9 /* CalendarKeyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarKeyView.swift; sourceTree = "<group>"; };
 		87B9AB6028DB52A100233CA6 /* DateResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateResult.swift; sourceTree = "<group>"; };
+		87C0AF8F28EB595E00839FF4 /* RaceDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceDetailView.swift; sourceTree = "<group>"; };
 		87D23E1428DCA4F7006EE1A3 /* StartDateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartDateView.swift; sourceTree = "<group>"; };
 		87D23E1628DCB253006EE1A3 /* RaceDateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceDateView.swift; sourceTree = "<group>"; };
 		87D23E1928DCD31E006EE1A3 /* Pace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pace.swift; sourceTree = "<group>"; };
@@ -105,6 +109,16 @@
 			path = "Calendar Views";
 			sourceTree = "<group>";
 		};
+		878D935528EDC613001D98DE /* Race Views */ = {
+			isa = PBXGroup;
+			children = (
+				87297C9C28DDF468001550C1 /* RacesListView.swift */,
+				878D5AEE28E148BC007F2BE7 /* RaceEditView.swift */,
+				87C0AF8F28EB595E00839FF4 /* RaceDetailView.swift */,
+			);
+			path = "Race Views";
+			sourceTree = "<group>";
+		};
 		87A9969628DD15AF00EA335F /* Pacing Calculator Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -118,13 +132,12 @@
 		87ADFE2428DA434900B24A8C /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				8752D18A28E72F0E00C47317 /* Calendar Views */,
 				87DF7EA828D90D65003D7E9F /* ContentView.swift */,
-				87297C9C28DDF468001550C1 /* RacesListView.swift */,
-				878D5AEE28E148BC007F2BE7 /* RaceEditView.swift */,
-				87297C9628DDF126001550C1 /* utility views */,
+				8752D18A28E72F0E00C47317 /* Calendar Views */,
 				87D23E1828DCB5F5006EE1A3 /* DateViews */,
 				87A9969628DD15AF00EA335F /* Pacing Calculator Views */,
+				878D935528EDC613001D98DE /* Race Views */,
+				87297C9628DDF126001550C1 /* utility views */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -135,6 +148,7 @@
 				87E599BA28E1DC890083E1C3 /* Binding-OnChange.swift */,
 				87B9AB6028DB52A100233CA6 /* DateResult.swift */,
 				87297C9728DDF142001550C1 /* Main.xcdatamodeld */,
+				87061F3028EC5E73009FE969 /* OpenGraphData.swift */,
 				87D23E1928DCD31E006EE1A3 /* Pace.swift */,
 				878D5AF028E14958007F2BE7 /* Race-CoreDataHelper.swift */,
 				87297C9A28DDF18A001550C1 /* DataController.swift */,
@@ -183,8 +197,8 @@
 		87DF7EA528D90D65003D7E9F /* RunnerTools */ = {
 			isa = PBXGroup;
 			children = (
-				87ADFE2528DA435200B24A8C /* Models */,
 				87DF7EA628D90D65003D7E9F /* RunnerToolsApp.swift */,
+				87ADFE2528DA435200B24A8C /* Models */,
 				87ADFE2428DA434900B24A8C /* Views */,
 				87ADFE2628DA435A00B24A8C /* ViewModels */,
 				87DF7EAA28D90D65003D7E9F /* Assets.xcassets */,
@@ -272,6 +286,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				87D23E2028DCDB70006EE1A3 /* GoalPaceView.swift in Sources */,
+				87C0AF9028EB595E00839FF4 /* RaceDetailView.swift in Sources */,
 				878D5AF128E14958007F2BE7 /* Race-CoreDataHelper.swift in Sources */,
 				8752D18528E72AE100C47317 /* CalendarView.swift in Sources */,
 				87A4A53028DD4AC3006D91A1 /* Pace-ViewModel.swift in Sources */,
@@ -294,6 +309,7 @@
 				87ADFE2828DA44B000B24A8C /* DateCalculatorView.swift in Sources */,
 				87DF7EA928D90D65003D7E9F /* ContentView.swift in Sources */,
 				87297C9B28DDF18A001550C1 /* DataController.swift in Sources */,
+				87061F3128EC5E73009FE969 /* OpenGraphData.swift in Sources */,
 				8752D18728E72BA100C47317 /* Calendar-ViewModel.swift in Sources */,
 				87D23E1A28DCD31E006EE1A3 /* Pace.swift in Sources */,
 				87B9AB6128DB52A100233CA6 /* DateResult.swift in Sources */,

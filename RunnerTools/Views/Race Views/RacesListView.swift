@@ -44,7 +44,7 @@ struct RacesListView: View {
                         if pastRaces.wrappedValue.count > 0 {
                             Section("Past Races") {
                                 ForEach(pastRaces.wrappedValue) { race in
-                                    NavigationLink(race.raceName, value: race)
+                                    NavigationLink("\(race.raceName) (\(race.raceDateString!))", value: race)
                                 }
                                 .onDelete { offsets in
                                     for offset in offsets {
@@ -77,13 +77,7 @@ struct RacesListView: View {
             }
             // New NavigationStack syntax
             .navigationDestination(for: Race.self) { race in
-                RaceEditView(race: race)
-                    .toolbar {
-                        // add a done button to pop the edit race view
-                        Button("done") {
-                            raceStack = [Race]()
-                        }
-                    }
+                RaceEditView(race: race, editMode: race.raceName == "New Race" ? true : false)
             }
         }
     }

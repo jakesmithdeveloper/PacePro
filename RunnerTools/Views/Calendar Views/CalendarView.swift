@@ -33,21 +33,6 @@ struct CalendarView: View {
             }
             CalendarKeyView()
         }
-//        .gesture(
-//            DragGesture()
-//                .onEnded { gesture in
-//                    if gesture.translation.width > 0 {
-//                        // go back one month
-//                        withAnimation {
-//                            vm.calendarMonth = vm.returnPreviousMonth(date: vm.calendarMonth)
-//                        }
-//                    } else {
-//                        withAnimation {
-//                            vm.calendarMonth = vm.returnNextMonth(date: vm.calendarMonth)
-//                        }
-//                    }
-//                }
-//        )
         .environmentObject(vm)
     }
     
