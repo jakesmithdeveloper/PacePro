@@ -1,0 +1,670 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		87061F3128EC5E73009FE969 /* OpenGraphData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87061F3028EC5E73009FE969 /* OpenGraphData.swift */; };
+		87297C9928DDF142001550C1 /* Main.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 87297C9728DDF142001550C1 /* Main.xcdatamodeld */; };
+		87297C9B28DDF18A001550C1 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87297C9A28DDF18A001550C1 /* DataController.swift */; };
+		87297C9D28DDF468001550C1 /* RacesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87297C9C28DDF468001550C1 /* RacesListView.swift */; };
+		8752D18528E72AE100C47317 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8752D18428E72AE100C47317 /* CalendarView.swift */; };
+		8752D18728E72BA100C47317 /* Calendar-ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8752D18628E72BA100C47317 /* Calendar-ViewModel.swift */; };
+		8752D18928E72E7300C47317 /* MonthPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8752D18828E72E7300C47317 /* MonthPicker.swift */; };
+		878D5AEF28E148BC007F2BE7 /* RaceEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878D5AEE28E148BC007F2BE7 /* RaceEditView.swift */; };
+		878D5AF128E14958007F2BE7 /* Race-CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878D5AF028E14958007F2BE7 /* Race-CoreDataHelper.swift */; };
+		878D935D28EDCB51001D98DE /* RunnerToolsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878D935C28EDCB51001D98DE /* RunnerToolsTests.swift */; };
+		878D936628EDCE42001D98DE /* RaceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878D936528EDCE42001D98DE /* RaceTests.swift */; };
+		879BEECF28EF23FD003AE161 /* DevelopmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879BEECE28EF23FD003AE161 /* DevelopmentTests.swift */; };
+		87A1D29828E5DE2800818689 /* PresetDistanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A1D29728E5DE2800818689 /* PresetDistanceView.swift */; };
+		87A1D29A28E5E20A00818689 /* Date-ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A1D29928E5E20A00818689 /* Date-ViewModel.swift */; };
+		87A4A53028DD4AC3006D91A1 /* Pace-ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A4A52F28DD4AC3006D91A1 /* Pace-ViewModel.swift */; };
+		87A9969528DD114900EA335F /* GoalTimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A9969428DD114900EA335F /* GoalTimeView.swift */; };
+		87ADFE2828DA44B000B24A8C /* DateCalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87ADFE2728DA44B000B24A8C /* DateCalculatorView.swift */; };
+		87ADFE2A28DB475C00B24A8C /* TrainingBlockLengthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87ADFE2928DB475C00B24A8C /* TrainingBlockLengthView.swift */; };
+		87ADFE2C28DB4A8500B24A8C /* CenteredButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87ADFE2B28DB4A8500B24A8C /* CenteredButtonView.swift */; };
+		87B22E9B28EB1DB4002404C9 /* CalendarCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B22E9A28EB1DB4002404C9 /* CalendarCellView.swift */; };
+		87B22E9D28EB36D2002404C9 /* CalendarKeyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B22E9C28EB36D2002404C9 /* CalendarKeyView.swift */; };
+		87B9AB6128DB52A100233CA6 /* DateResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B9AB6028DB52A100233CA6 /* DateResult.swift */; };
+		87C0AF9028EB595E00839FF4 /* RaceDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C0AF8F28EB595E00839FF4 /* RaceDetailView.swift */; };
+		87D23E1528DCA4F7006EE1A3 /* StartDateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87D23E1428DCA4F7006EE1A3 /* StartDateView.swift */; };
+		87D23E1728DCB253006EE1A3 /* RaceDateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87D23E1628DCB253006EE1A3 /* RaceDateView.swift */; };
+		87D23E1A28DCD31E006EE1A3 /* Pace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87D23E1928DCD31E006EE1A3 /* Pace.swift */; };
+		87D23E1C28DCD657006EE1A3 /* PaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87D23E1B28DCD657006EE1A3 /* PaceView.swift */; };
+		87D23E2028DCDB70006EE1A3 /* GoalPaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87D23E1F28DCDB70006EE1A3 /* GoalPaceView.swift */; };
+		87DF7EA728D90D65003D7E9F /* RunnerToolsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DF7EA628D90D65003D7E9F /* RunnerToolsApp.swift */; };
+		87DF7EA928D90D65003D7E9F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DF7EA828D90D65003D7E9F /* ContentView.swift */; };
+		87DF7EAB28D90D65003D7E9F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87DF7EAA28D90D65003D7E9F /* Assets.xcassets */; };
+		87DF7EAE28D90D65003D7E9F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87DF7EAD28D90D65003D7E9F /* Preview Assets.xcassets */; };
+		87E599BB28E1DC890083E1C3 /* Binding-OnChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E599BA28E1DC890083E1C3 /* Binding-OnChange.swift */; };
+		87F3E94728E23435008C630F /* TextFieldWithText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F3E94628E23435008C630F /* TextFieldWithText.swift */; };
+		87F3E94928E2542B008C630F /* RaceEdit-ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F3E94828E2542B008C630F /* RaceEdit-ViewModel.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		878D935E28EDCB51001D98DE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 87DF7E9B28D90D65003D7E9F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 87DF7EA228D90D65003D7E9F;
+			remoteInfo = RunnerTools;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		87061F3028EC5E73009FE969 /* OpenGraphData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenGraphData.swift; sourceTree = "<group>"; };
+		87297C9828DDF142001550C1 /* Main.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Main.xcdatamodel; sourceTree = "<group>"; };
+		87297C9A28DDF18A001550C1 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
+		87297C9C28DDF468001550C1 /* RacesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RacesListView.swift; sourceTree = "<group>"; };
+		8752D18428E72AE100C47317 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
+		8752D18628E72BA100C47317 /* Calendar-ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Calendar-ViewModel.swift"; sourceTree = "<group>"; };
+		8752D18828E72E7300C47317 /* MonthPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthPicker.swift; sourceTree = "<group>"; };
+		878D5AEE28E148BC007F2BE7 /* RaceEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceEditView.swift; sourceTree = "<group>"; };
+		878D5AF028E14958007F2BE7 /* Race-CoreDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Race-CoreDataHelper.swift"; sourceTree = "<group>"; };
+		878D935A28EDCB51001D98DE /* Run ToolsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Run ToolsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		878D935C28EDCB51001D98DE /* RunnerToolsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunnerToolsTests.swift; sourceTree = "<group>"; };
+		878D936528EDCE42001D98DE /* RaceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceTests.swift; sourceTree = "<group>"; };
+		879BEECE28EF23FD003AE161 /* DevelopmentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevelopmentTests.swift; sourceTree = "<group>"; };
+		87A1D29728E5DE2800818689 /* PresetDistanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresetDistanceView.swift; sourceTree = "<group>"; };
+		87A1D29928E5E20A00818689 /* Date-ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date-ViewModel.swift"; sourceTree = "<group>"; };
+		87A4A52F28DD4AC3006D91A1 /* Pace-ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Pace-ViewModel.swift"; sourceTree = "<group>"; };
+		87A9969428DD114900EA335F /* GoalTimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalTimeView.swift; sourceTree = "<group>"; };
+		87ADFE2728DA44B000B24A8C /* DateCalculatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateCalculatorView.swift; sourceTree = "<group>"; };
+		87ADFE2928DB475C00B24A8C /* TrainingBlockLengthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingBlockLengthView.swift; sourceTree = "<group>"; };
+		87ADFE2B28DB4A8500B24A8C /* CenteredButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenteredButtonView.swift; sourceTree = "<group>"; };
+		87B22E9A28EB1DB4002404C9 /* CalendarCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCellView.swift; sourceTree = "<group>"; };
+		87B22E9C28EB36D2002404C9 /* CalendarKeyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarKeyView.swift; sourceTree = "<group>"; };
+		87B9AB6028DB52A100233CA6 /* DateResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateResult.swift; sourceTree = "<group>"; };
+		87C0AF8F28EB595E00839FF4 /* RaceDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceDetailView.swift; sourceTree = "<group>"; };
+		87D23E1428DCA4F7006EE1A3 /* StartDateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartDateView.swift; sourceTree = "<group>"; };
+		87D23E1628DCB253006EE1A3 /* RaceDateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceDateView.swift; sourceTree = "<group>"; };
+		87D23E1928DCD31E006EE1A3 /* Pace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pace.swift; sourceTree = "<group>"; };
+		87D23E1B28DCD657006EE1A3 /* PaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaceView.swift; sourceTree = "<group>"; };
+		87D23E1F28DCDB70006EE1A3 /* GoalPaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalPaceView.swift; sourceTree = "<group>"; };
+		87DF7EA328D90D65003D7E9F /* Run Tools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Run Tools.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		87DF7EA628D90D65003D7E9F /* RunnerToolsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunnerToolsApp.swift; sourceTree = "<group>"; };
+		87DF7EA828D90D65003D7E9F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		87DF7EAA28D90D65003D7E9F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		87DF7EAD28D90D65003D7E9F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		87E599BA28E1DC890083E1C3 /* Binding-OnChange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Binding-OnChange.swift"; sourceTree = "<group>"; };
+		87F3E94628E23435008C630F /* TextFieldWithText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldWithText.swift; sourceTree = "<group>"; };
+		87F3E94828E2542B008C630F /* RaceEdit-ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RaceEdit-ViewModel.swift"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		878D935728EDCB51001D98DE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		87DF7EA028D90D65003D7E9F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		87297C9628DDF126001550C1 /* utility views */ = {
+			isa = PBXGroup;
+			children = (
+				87F3E94628E23435008C630F /* TextFieldWithText.swift */,
+				87ADFE2B28DB4A8500B24A8C /* CenteredButtonView.swift */,
+				87A1D29728E5DE2800818689 /* PresetDistanceView.swift */,
+			);
+			path = "utility views";
+			sourceTree = "<group>";
+		};
+		8752D18A28E72F0E00C47317 /* Calendar Views */ = {
+			isa = PBXGroup;
+			children = (
+				8752D18428E72AE100C47317 /* CalendarView.swift */,
+				87B22E9C28EB36D2002404C9 /* CalendarKeyView.swift */,
+				87B22E9A28EB1DB4002404C9 /* CalendarCellView.swift */,
+				8752D18828E72E7300C47317 /* MonthPicker.swift */,
+			);
+			path = "Calendar Views";
+			sourceTree = "<group>";
+		};
+		878D935528EDC613001D98DE /* Race Views */ = {
+			isa = PBXGroup;
+			children = (
+				87297C9C28DDF468001550C1 /* RacesListView.swift */,
+				878D5AEE28E148BC007F2BE7 /* RaceEditView.swift */,
+				87C0AF8F28EB595E00839FF4 /* RaceDetailView.swift */,
+			);
+			path = "Race Views";
+			sourceTree = "<group>";
+		};
+		878D935B28EDCB51001D98DE /* RunnerToolsTests */ = {
+			isa = PBXGroup;
+			children = (
+				878D935C28EDCB51001D98DE /* RunnerToolsTests.swift */,
+				878D936528EDCE42001D98DE /* RaceTests.swift */,
+				879BEECE28EF23FD003AE161 /* DevelopmentTests.swift */,
+			);
+			path = RunnerToolsTests;
+			sourceTree = "<group>";
+		};
+		87A9969628DD15AF00EA335F /* Pacing Calculator Views */ = {
+			isa = PBXGroup;
+			children = (
+				87D23E1F28DCDB70006EE1A3 /* GoalPaceView.swift */,
+				87A9969428DD114900EA335F /* GoalTimeView.swift */,
+				87D23E1B28DCD657006EE1A3 /* PaceView.swift */,
+			);
+			path = "Pacing Calculator Views";
+			sourceTree = "<group>";
+		};
+		87ADFE2428DA434900B24A8C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				87DF7EA828D90D65003D7E9F /* ContentView.swift */,
+				8752D18A28E72F0E00C47317 /* Calendar Views */,
+				87D23E1828DCB5F5006EE1A3 /* DateViews */,
+				87A9969628DD15AF00EA335F /* Pacing Calculator Views */,
+				878D935528EDC613001D98DE /* Race Views */,
+				87297C9628DDF126001550C1 /* utility views */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		87ADFE2528DA435200B24A8C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				87E599BA28E1DC890083E1C3 /* Binding-OnChange.swift */,
+				87297C9A28DDF18A001550C1 /* DataController.swift */,
+				87B9AB6028DB52A100233CA6 /* DateResult.swift */,
+				87297C9728DDF142001550C1 /* Main.xcdatamodeld */,
+				87061F3028EC5E73009FE969 /* OpenGraphData.swift */,
+				87D23E1928DCD31E006EE1A3 /* Pace.swift */,
+				878D5AF028E14958007F2BE7 /* Race-CoreDataHelper.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		87ADFE2628DA435A00B24A8C /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				8752D18628E72BA100C47317 /* Calendar-ViewModel.swift */,
+				87A4A52F28DD4AC3006D91A1 /* Pace-ViewModel.swift */,
+				87F3E94828E2542B008C630F /* RaceEdit-ViewModel.swift */,
+				87A1D29928E5E20A00818689 /* Date-ViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		87D23E1828DCB5F5006EE1A3 /* DateViews */ = {
+			isa = PBXGroup;
+			children = (
+				87ADFE2728DA44B000B24A8C /* DateCalculatorView.swift */,
+				87ADFE2928DB475C00B24A8C /* TrainingBlockLengthView.swift */,
+				87D23E1428DCA4F7006EE1A3 /* StartDateView.swift */,
+				87D23E1628DCB253006EE1A3 /* RaceDateView.swift */,
+			);
+			path = DateViews;
+			sourceTree = "<group>";
+		};
+		87DF7E9A28D90D65003D7E9F = {
+			isa = PBXGroup;
+			children = (
+				87DF7EA528D90D65003D7E9F /* Run Tools */,
+				878D935B28EDCB51001D98DE /* RunnerToolsTests */,
+				87DF7EA428D90D65003D7E9F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		87DF7EA428D90D65003D7E9F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				87DF7EA328D90D65003D7E9F /* Run Tools.app */,
+				878D935A28EDCB51001D98DE /* Run ToolsTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		87DF7EA528D90D65003D7E9F /* Run Tools */ = {
+			isa = PBXGroup;
+			children = (
+				87DF7EA628D90D65003D7E9F /* RunnerToolsApp.swift */,
+				87ADFE2528DA435200B24A8C /* Models */,
+				87ADFE2428DA434900B24A8C /* Views */,
+				87ADFE2628DA435A00B24A8C /* ViewModels */,
+				87DF7EAA28D90D65003D7E9F /* Assets.xcassets */,
+				87DF7EAC28D90D65003D7E9F /* Preview Content */,
+			);
+			path = "Run Tools";
+			sourceTree = "<group>";
+		};
+		87DF7EAC28D90D65003D7E9F /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				87DF7EAD28D90D65003D7E9F /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		878D935928EDCB51001D98DE /* Run ToolsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 878D936028EDCB51001D98DE /* Build configuration list for PBXNativeTarget "Run ToolsTests" */;
+			buildPhases = (
+				878D935628EDCB51001D98DE /* Sources */,
+				878D935728EDCB51001D98DE /* Frameworks */,
+				878D935828EDCB51001D98DE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				878D935F28EDCB51001D98DE /* PBXTargetDependency */,
+			);
+			name = "Run ToolsTests";
+			productName = RunnerToolsTests;
+			productReference = 878D935A28EDCB51001D98DE /* Run ToolsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		87DF7EA228D90D65003D7E9F /* Run Tools */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 87DF7EB128D90D65003D7E9F /* Build configuration list for PBXNativeTarget "Run Tools" */;
+			buildPhases = (
+				87DF7E9F28D90D65003D7E9F /* Sources */,
+				87DF7EA028D90D65003D7E9F /* Frameworks */,
+				87DF7EA128D90D65003D7E9F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Run Tools";
+			productName = RunnerTools;
+			productReference = 87DF7EA328D90D65003D7E9F /* Run Tools.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		87DF7E9B28D90D65003D7E9F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1400;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					878D935928EDCB51001D98DE = {
+						CreatedOnToolsVersion = 14.0;
+						TestTargetID = 87DF7EA228D90D65003D7E9F;
+					};
+					87DF7EA228D90D65003D7E9F = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+				};
+			};
+			buildConfigurationList = 87DF7E9E28D90D65003D7E9F /* Build configuration list for PBXProject "Run Tools" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 87DF7E9A28D90D65003D7E9F;
+			productRefGroup = 87DF7EA428D90D65003D7E9F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				87DF7EA228D90D65003D7E9F /* Run Tools */,
+				878D935928EDCB51001D98DE /* Run ToolsTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		878D935828EDCB51001D98DE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		87DF7EA128D90D65003D7E9F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				87DF7EAE28D90D65003D7E9F /* Preview Assets.xcassets in Resources */,
+				87DF7EAB28D90D65003D7E9F /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		878D935628EDCB51001D98DE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				878D936628EDCE42001D98DE /* RaceTests.swift in Sources */,
+				878D935D28EDCB51001D98DE /* RunnerToolsTests.swift in Sources */,
+				879BEECF28EF23FD003AE161 /* DevelopmentTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		87DF7E9F28D90D65003D7E9F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				87D23E2028DCDB70006EE1A3 /* GoalPaceView.swift in Sources */,
+				87C0AF9028EB595E00839FF4 /* RaceDetailView.swift in Sources */,
+				878D5AF128E14958007F2BE7 /* Race-CoreDataHelper.swift in Sources */,
+				8752D18528E72AE100C47317 /* CalendarView.swift in Sources */,
+				87A4A53028DD4AC3006D91A1 /* Pace-ViewModel.swift in Sources */,
+				87E599BB28E1DC890083E1C3 /* Binding-OnChange.swift in Sources */,
+				87ADFE2C28DB4A8500B24A8C /* CenteredButtonView.swift in Sources */,
+				87297C9D28DDF468001550C1 /* RacesListView.swift in Sources */,
+				87A9969528DD114900EA335F /* GoalTimeView.swift in Sources */,
+				8752D18928E72E7300C47317 /* MonthPicker.swift in Sources */,
+				87297C9928DDF142001550C1 /* Main.xcdatamodeld in Sources */,
+				87D23E1C28DCD657006EE1A3 /* PaceView.swift in Sources */,
+				87F3E94928E2542B008C630F /* RaceEdit-ViewModel.swift in Sources */,
+				87B22E9B28EB1DB4002404C9 /* CalendarCellView.swift in Sources */,
+				87A1D29828E5DE2800818689 /* PresetDistanceView.swift in Sources */,
+				87B22E9D28EB36D2002404C9 /* CalendarKeyView.swift in Sources */,
+				87D23E1728DCB253006EE1A3 /* RaceDateView.swift in Sources */,
+				87A1D29A28E5E20A00818689 /* Date-ViewModel.swift in Sources */,
+				878D5AEF28E148BC007F2BE7 /* RaceEditView.swift in Sources */,
+				87ADFE2A28DB475C00B24A8C /* TrainingBlockLengthView.swift in Sources */,
+				87F3E94728E23435008C630F /* TextFieldWithText.swift in Sources */,
+				87ADFE2828DA44B000B24A8C /* DateCalculatorView.swift in Sources */,
+				87DF7EA928D90D65003D7E9F /* ContentView.swift in Sources */,
+				87297C9B28DDF18A001550C1 /* DataController.swift in Sources */,
+				87061F3128EC5E73009FE969 /* OpenGraphData.swift in Sources */,
+				8752D18728E72BA100C47317 /* Calendar-ViewModel.swift in Sources */,
+				87D23E1A28DCD31E006EE1A3 /* Pace.swift in Sources */,
+				87B9AB6128DB52A100233CA6 /* DateResult.swift in Sources */,
+				87DF7EA728D90D65003D7E9F /* RunnerToolsApp.swift in Sources */,
+				87D23E1528DCA4F7006EE1A3 /* StartDateView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		878D935F28EDCB51001D98DE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 87DF7EA228D90D65003D7E9F /* Run Tools */;
+			targetProxy = 878D935E28EDCB51001D98DE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		878D936128EDCB51001D98DE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 52XE3E2L4S;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = info.jakesmith.RunnerToolsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Run Tools.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Run Tools";
+			};
+			name = Debug;
+		};
+		878D936228EDCB51001D98DE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 52XE3E2L4S;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = info.jakesmith.RunnerToolsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Run Tools.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Run Tools";
+			};
+			name = Release;
+		};
+		87DF7EAF28D90D65003D7E9F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		87DF7EB028D90D65003D7E9F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		87DF7EB228D90D65003D7E9F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Run\\ Tools/Preview Content\"";
+				DEVELOPMENT_TEAM = 52XE3E2L4S;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Run Tools";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = info.jakesmith.RunnerTools;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		87DF7EB328D90D65003D7E9F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Run\\ Tools/Preview Content\"";
+				DEVELOPMENT_TEAM = 52XE3E2L4S;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Run Tools";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = info.jakesmith.RunnerTools;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		878D936028EDCB51001D98DE /* Build configuration list for PBXNativeTarget "Run ToolsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				878D936128EDCB51001D98DE /* Debug */,
+				878D936228EDCB51001D98DE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		87DF7E9E28D90D65003D7E9F /* Build configuration list for PBXProject "Run Tools" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				87DF7EAF28D90D65003D7E9F /* Debug */,
+				87DF7EB028D90D65003D7E9F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		87DF7EB128D90D65003D7E9F /* Build configuration list for PBXNativeTarget "Run Tools" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				87DF7EB228D90D65003D7E9F /* Debug */,
+				87DF7EB328D90D65003D7E9F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		87297C9728DDF142001550C1 /* Main.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				87297C9828DDF142001550C1 /* Main.xcdatamodel */,
+			);
+			currentVersion = 87297C9828DDF142001550C1 /* Main.xcdatamodel */;
+			path = Main.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 87DF7E9B28D90D65003D7E9F /* Project object */;
+}
