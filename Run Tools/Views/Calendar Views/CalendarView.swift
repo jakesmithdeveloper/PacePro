@@ -8,12 +8,12 @@
 import SwiftUI
 
 enum CellType {
-    case inRange, startDay, endDay, outOfRange
+    case inRange, startDay, endDay, outOfRange, afterMonthInRange, beforeMonthInRange
 }
 
 struct CalendarView: View {
     
-    @StateObject var vm: CalendarViewModel
+    @ObservedObject var vm: CalendarViewModel
     
     let start: Date
     let end: Date
@@ -40,7 +40,7 @@ struct CalendarView: View {
         self.start = start
         self.end = end
         
-        _vm = StateObject(wrappedValue: CalendarViewModel(calendarMonth: start))
+        _vm = ObservedObject(wrappedValue: CalendarViewModel(calendarMonth: start))
     }
     
 }

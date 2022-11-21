@@ -24,7 +24,6 @@ struct CenteredButtonView: View {
 struct CenteredButtonView_Previews: PreviewProvider {
     static var previews: some View {
         CenteredButtonView(title: "test") {
-            print("test")
         }
     }
 }

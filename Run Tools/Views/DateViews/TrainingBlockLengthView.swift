@@ -10,7 +10,9 @@ import SwiftUI
 struct TrainingBlockLengthView: View {
     
     @StateObject private var vm = DateCalculatorViewModel()
-
+    
+    
+    
     var body: some View {
         VStack {
             Form {
@@ -36,6 +38,9 @@ struct TrainingBlockLengthView: View {
             }
         }
         .navigationTitle("Training Block Length")
+        .onDisappear {
+            vm.reset()
+        }
     }
 }
 

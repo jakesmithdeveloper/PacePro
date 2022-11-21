@@ -31,6 +31,10 @@ class CalendarViewModel: ObservableObject {
         return daysInMonth(previousMonth)
     }
     
+    func setCalendarMonth(month: Date) {
+        self.calendarMonth = month
+    }
+    
     func parseCount(count: Int) -> Int {
         if count > 0 && count < (totalDays + 1) {
             // inside current month
@@ -50,10 +54,11 @@ class CalendarViewModel: ObservableObject {
         let startOfDayEnd = calendar.startOfDay(for: end)
         
         let dateInterval = DateInterval(start: startOfDayStart, end: startOfDayEnd)
+        let currentMonthComponents = calendar.dateComponents([.month, .year], from: calendarMonth)
+        let dc = DateComponents(year: currentMonthComponents.year, month: currentMonthComponents.month, day: count)
+        guard let date = calendar.date(from: dc) else { return .outOfRange }
+
         if count > 0 && count < (totalDays + 1) {
-            let currentMonthComponents = calendar.dateComponents([.month, .year], from: calendarMonth)
-            let dc = DateComponents(year: currentMonthComponents.year, month: currentMonthComponents.month, day: count)
-            guard let date = calendar.date(from: dc) else { return .outOfRange }
             if date == startOfDayStart {
                 return .startDay
             } else if date == startOfDayEnd {
@@ -63,8 +68,11 @@ class CalendarViewModel: ObservableObject {
             } else {
                 return .outOfRange
             }
+        } else if count > 0 && dateInterval.contains(date) {
+            return .afterMonthInRange
+        } else if count <= 0 && dateInterval.contains(date) {
+            return .beforeMonthInRange
         }
-        
         return .outOfRange
     }
     

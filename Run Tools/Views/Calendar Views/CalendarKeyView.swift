@@ -14,17 +14,26 @@ struct CalendarKeyView: View {
                 .fill(.green)
                 .frame(width: 16, height: 16)
             Text("start date")
-                .font(.caption)
+                .font(.caption2)
             Capsule()
                 .fill(.blue)
                 .frame(width: 16, height: 16)
+            Text("or")
+                .font(.caption2)
+            Capsule()
+                .frame(width: 16, height: 16)
+                .foregroundColor(.white)
+                .overlay {
+                    RoundedRectangle(cornerRadius: 10)
+                        .stroke(.blue, lineWidth: 1)
+                }
             Text("training block")
-                .font(.caption)
+                .font(.caption2)
             Capsule()
                 .fill(.red)
                 .frame(width: 16, height: 16)
             Text("race date")
-                .font(.caption)
+                .font(.caption2)
         }
     }
 }

@@ -50,4 +50,10 @@ class DateCalculatorViewModel: ObservableObject {
         return df.string(from: date)
     }
     
+    func reset() {
+        self.startDate = Date()
+        self.raceDate = Date()
+        self.trainingBlockLength = ""
+    }
+    
 }
