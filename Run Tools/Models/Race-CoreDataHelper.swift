@@ -34,6 +34,10 @@ extension Race {
         unit ?? "miles"
     }
     
+    var raceEdit: Bool {
+        edit ?? false
+    }
+    
     // Display Strings
     var raceDateString: String? {
         let df = DateFormatter()

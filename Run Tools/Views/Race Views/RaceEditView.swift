@@ -1,73 +1,53 @@
 //
 //  RaceView.swift
-//  RunnerTools
+//  Run Tools
 //
-//  Created by Jake Smith on 9/25/22.
+//  Created by Jake Smith on 11/22/22.
 //
 
 import SwiftUI
 
 struct RaceEditView: View {
     
-    @EnvironmentObject var dataController: DataController
-    @StateObject var vm: RaceEditViewModel
+    @Environment(\.colorScheme) var colorScheme
+    @EnvironmentObject var vm: RaceEditViewModel
     
-    @State private var editMode: Bool
+    @State private var showingUrlAlert = false
     
     var body: some View {
-        VStack {
-            if editMode == true {
-                Form {
-                    Section("Race Information") {
-                        TextFieldWithText(userInput: $vm.name.onChange {
-                            vm.update()
-                        }, prompt: "Race Name:")
-                        DatePicker("race date", selection: $vm.date.onChange {
-                            vm.update()
-                        }, displayedComponents: [.date])
-                        .datePickerStyle(.compact)
-                        TextFieldWithText(userInput: $vm.website.onChange {
-                            vm.update()
-                        }, prompt: "Race website:")
-                        if vm.date > Date() {
-                            Text("Countdown: \(vm.countdownString)")
+        Form {
+            Section("Race Information") {
+                TextFieldWithText(userInput: $vm.name.onChange {
+                    vm.update()
+                }, prompt: "Race Name:")
+                DatePicker("race date", selection: $vm.date.onChange {
+                    vm.update()
+                }, displayedComponents: [.date])
+                .datePickerStyle(.compact)
+                HStack {
+                    Image(systemName: "questionmark.circle")
+                        .foregroundColor(colorScheme == .dark ? .primary : .blue)
+                        .onTapGesture {
+                            showingUrlAlert = true
                         }
-                    }
-                }
-                .scrollDismissesKeyboard(.immediately)
-            } else {
-                RaceDetailView(race: vm.race, vm: vm)
-            }
-            
-        }
-        .onDisappear {
-            dataController.save()
-        }
-        .toolbar {
-            Button(editMode ? "done" : "edit") {
-                vm.updateWithPhoto()
-                
-                withAnimation {
-                    editMode.toggle()
-                    dataController.save()
+
+                    TextFieldWithText(userInput: $vm.website.onChange {
+                        vm.update()
+                    }, prompt: "Race website:")
                 }
             }
         }
-        .navigationTitle("\(vm.raceYearString) \(vm.race.raceName)")
+        .scrollDismissesKeyboard(.immediately)
+        .alert("Race URL", isPresented: $showingUrlAlert, actions: {
+            Button("ok", role: .cancel) {}
+        }, message: {
+            Text("The race url is used for creating a link to the race page, as well as displaying the race's preview image")
+        })
     }
-    
-    init(race: Race, editMode: Bool) {
-        _vm = StateObject(wrappedValue: RaceEditViewModel(race: race))
-        _editMode = State(wrappedValue: editMode)
-    }
-    
 }
 
-struct RaceView_Previews: PreviewProvider {
-    
+struct RaceEditView_Previews: PreviewProvider {
     static var previews: some View {
-        NavigationView {
-            RaceEditView(race: Race.example, editMode: true)
-        }
+        RaceEditView()
     }
 }

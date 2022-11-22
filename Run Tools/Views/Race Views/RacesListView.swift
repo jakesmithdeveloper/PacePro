@@ -70,6 +70,7 @@ struct RacesListView: View {
             .toolbar {
                 Button {
                     let race = Race(context: dataController.container.viewContext)
+                    race.edit = true
                     raceStack.append(race)
                 } label: {
                     Label("add", systemImage: "plus")
@@ -77,7 +78,7 @@ struct RacesListView: View {
             }
             // New NavigationStack syntax
             .navigationDestination(for: Race.self) { race in
-                RaceEditView(race: race, editMode: race.raceName == "New Race" ? true : false)
+                RaceView(race: race, editMode: race.raceEdit)
             }
         }
     }
@@ -85,7 +86,7 @@ struct RacesListView: View {
     init() {
         upcommingRaces = FetchRequest<Race>(entity: Race.entity(), sortDescriptors: [NSSortDescriptor(keyPath: \Race.date, ascending: true)], predicate: NSPredicate(format: "date > %@", argumentArray: [Date()]))
         
-        pastRaces = FetchRequest<Race>(entity: Race.entity(), sortDescriptors: [NSSortDescriptor(keyPath: \Race.date, ascending: true)], predicate: NSPredicate(format: "date <= %@", argumentArray: [Calendar.current.startOfDay(for: Date())]))
+        pastRaces = FetchRequest<Race>(entity: Race.entity(), sortDescriptors: [NSSortDescriptor(keyPath: \Race.date, ascending: false)], predicate: NSPredicate(format: "date <= %@", argumentArray: [Calendar.current.startOfDay(for: Date())]))
     }
 }
 

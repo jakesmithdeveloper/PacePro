@@ -41,9 +41,10 @@ struct RaceDetailView: View {
                         Link("Race Website", destination: URL(string: race.raceWebsite)!)
                     }
                 }
-                
-                Text("Race Countdown: \(vm.countdownString)")
-                    .bold()
+                if race.raceDate > Date() || race.raceDate.sameDay(as: Date()) {
+                    Text("Race Countdown: \(vm.countdownString == " " ? "Race Day!" : vm.countdownString)")
+                        .bold()
+                }
             }
         }
     }
