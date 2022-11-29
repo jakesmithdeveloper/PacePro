@@ -7,6 +7,31 @@
 
 import SwiftUI
 
+struct RaceImgPlaceholder: View {
+    
+    @Environment(\.colorScheme) var colorScheme
+    
+    let raceName: String
+    
+    var body: some View {
+        ZStack {
+            RoundedRectangle(cornerRadius: 20)
+                .fill(colorScheme == .dark ? Color.purple : Color(red: 0.101, green: 0.107, blue: 0.3))
+                .scaledToFit()
+            VStack {
+                Text("\(raceName)")
+                    .font(.largeTitle)
+                    .bold()
+                    .foregroundColor(.white)
+                Image(systemName: "flag.checkered.2.crossed")
+                    .font(.system(size: 96))
+                    .padding()
+                    .foregroundColor(.white)
+            }
+        }
+    }
+}
+
 struct RaceDetailView: View {
     
     let race: Race
@@ -15,16 +40,17 @@ struct RaceDetailView: View {
     var body: some View {
         Form {
             Section("Race information") {
-                if vm.imgURL != "" {
+                if vm.imgURL == "" || vm.imgURL == "no-image" {
+                    RaceImgPlaceholder(raceName: race.raceName)
+                } else {
                     AsyncImage(url: URL(string: vm.imgURL)!) { img in
                         img
                             .resizable()
                             .scaledToFit()
+                            
                     } placeholder: {
-                        Text("image loading ...")
-                            .font(.caption)
+                        RaceImgPlaceholder(raceName: race.raceName)
                     }
-
                 }
                 
                 HStack {

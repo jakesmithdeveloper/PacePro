@@ -62,6 +62,7 @@ class RaceEditViewModel: ObservableObject {
         race.name = name
         race.date = date
         race.website = website
+        race.edit = false
     }
     
     func updateWithPhoto() {
@@ -69,8 +70,10 @@ class RaceEditViewModel: ObservableObject {
         race.name = name
         race.date = date
         race.website = website
+        race.edit = false
         if let raceUrl = raceUrl {
             fetch(raceUrl, defaultValue: OpenGraphData.example) { data in
+                print("\(data.image)")
                 self.race.imgUrl = data.image
                 self.imgURL = data.image
             }

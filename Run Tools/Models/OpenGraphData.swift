@@ -12,5 +12,5 @@ struct OpenGraphData: Decodable {
     let image: String
     let description: String
     
-    static let example = OpenGraphData(title: "", image: "", description: "")
+    static let example = OpenGraphData(title: "no-title", image: "no-image", description: "no-description")
 }
