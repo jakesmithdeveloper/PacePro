@@ -16,6 +16,7 @@
 		8752D18528E72AE100C47317 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8752D18428E72AE100C47317 /* CalendarView.swift */; };
 		8752D18728E72BA100C47317 /* Calendar-ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8752D18628E72BA100C47317 /* Calendar-ViewModel.swift */; };
 		8752D18928E72E7300C47317 /* MonthPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8752D18828E72E7300C47317 /* MonthPicker.swift */; };
+		878C0464293F988C00B91EF0 /* CalendarStatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878C0463293F988C00B91EF0 /* CalendarStatsView.swift */; };
 		878D5AEF28E148BC007F2BE7 /* RaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878D5AEE28E148BC007F2BE7 /* RaceView.swift */; };
 		878D5AF128E14958007F2BE7 /* Race-CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878D5AF028E14958007F2BE7 /* Race-CoreDataHelper.swift */; };
 		878D935D28EDCB51001D98DE /* RunnerToolsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878D935C28EDCB51001D98DE /* RunnerToolsTests.swift */; };
@@ -68,6 +69,7 @@
 		8752D18428E72AE100C47317 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		8752D18628E72BA100C47317 /* Calendar-ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Calendar-ViewModel.swift"; sourceTree = "<group>"; };
 		8752D18828E72E7300C47317 /* MonthPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthPicker.swift; sourceTree = "<group>"; };
+		878C0463293F988C00B91EF0 /* CalendarStatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarStatsView.swift; sourceTree = "<group>"; };
 		878D5AEE28E148BC007F2BE7 /* RaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceView.swift; sourceTree = "<group>"; };
 		878D5AF028E14958007F2BE7 /* Race-CoreDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Race-CoreDataHelper.swift"; sourceTree = "<group>"; };
 		878D935A28EDCB51001D98DE /* Run ToolsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Run ToolsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -216,6 +218,7 @@
 		87D23E1828DCB5F5006EE1A3 /* DateViews */ = {
 			isa = PBXGroup;
 			children = (
+				878C0463293F988C00B91EF0 /* CalendarStatsView.swift */,
 				87ADFE2728DA44B000B24A8C /* DateCalculatorView.swift */,
 				87ADFE2928DB475C00B24A8C /* TrainingBlockLengthView.swift */,
 				87D23E1428DCA4F7006EE1A3 /* StartDateView.swift */,
@@ -392,6 +395,7 @@
 				87B22E9D28EB36D2002404C9 /* CalendarKeyView.swift in Sources */,
 				87D23E1728DCB253006EE1A3 /* RaceDateView.swift in Sources */,
 				87A1D29A28E5E20A00818689 /* Date-ViewModel.swift in Sources */,
+				878C0464293F988C00B91EF0 /* CalendarStatsView.swift in Sources */,
 				878D5AEF28E148BC007F2BE7 /* RaceView.swift in Sources */,
 				87ADFE2A28DB475C00B24A8C /* TrainingBlockLengthView.swift in Sources */,
 				87F3E94728E23435008C630F /* TextFieldWithText.swift in Sources */,
