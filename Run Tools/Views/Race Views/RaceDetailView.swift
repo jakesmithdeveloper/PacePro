@@ -7,24 +7,73 @@
 
 import SwiftUI
 
+struct RaceImgPlaceholder: View {
+
+    let raceName: String
+    let backgroundColor: Color
+    let textColor: Color
+    let logo: String
+    
+    var body: some View {
+        ZStack {
+            HStack {
+                Spacer()
+                RoundedRectangle(cornerRadius: 20)
+                    .fill(backgroundColor)
+                    .scaledToFit()
+                Spacer()
+            }
+            VStack {
+                Text("\(raceName)")
+                    .font(.largeTitle)
+                    .bold()
+                    .foregroundColor(textColor)
+                Image(systemName: logo)
+                    .font(.system(size: 96))
+                    .padding()
+                    .foregroundColor(textColor)
+            }
+        }
+    }
+}
+
 struct RaceDetailView: View {
     
+    
     let race: Race
+    
+    @Environment(\.colorScheme) var colorScheme
+    
     @ObservedObject var vm: RaceEditViewModel
+    
+    @State private var showingColorPicker = false
+    
+    @State private var backgroundColor = Color.purple
+    @State private var textColor = Color.white
+    @State private var sfSymbol = "flag.checkered.2.crossed"
     
     var body: some View {
         Form {
             Section("Race information") {
-                if vm.imgURL != "" {
+                if vm.imgURL == "" || vm.imgURL == "no-image" {
+                    RaceImgPlaceholder(raceName: race.raceName, backgroundColor: backgroundColor, textColor: textColor, logo: sfSymbol)
+                        .onTapGesture {
+                            showingColorPicker = true
+                        }
+                } else {
                     AsyncImage(url: URL(string: vm.imgURL)!) { img in
                         img
                             .resizable()
                             .scaledToFit()
+                            
                     } placeholder: {
-                        Text("image loading ...")
-                            .font(.caption)
+                        ZStack {
+                            RaceImgPlaceholder(raceName: race.raceName, backgroundColor: backgroundColor, textColor: textColor, logo: sfSymbol)
+                                .onTapGesture {
+                                    showingColorPicker = true
+                                }
+                        }
                     }
-
                 }
                 
                 HStack {
@@ -41,10 +90,14 @@ struct RaceDetailView: View {
                         Link("Race Website", destination: URL(string: race.raceWebsite)!)
                     }
                 }
-                
-                Text("Race Countdown: \(vm.countdownString)")
-                    .bold()
+                if race.raceDate > Date() || race.raceDate.sameDay(as: Date()) {
+                    Text("Race Countdown: \(vm.countdownString == " " ? "Race Day!" : vm.countdownString)")
+                        .bold()
+                }
             }
+        }
+        .sheet(isPresented: $showingColorPicker) {
+            RaceLogoPickers(backgroundColor: $backgroundColor, textColor: $textColor, sfSymbol: $sfSymbol)
         }
     }
     

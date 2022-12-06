@@ -11,8 +11,6 @@ struct TrainingBlockLengthView: View {
     
     @StateObject private var vm = DateCalculatorViewModel()
     
-    
-    
     var body: some View {
         VStack {
             Form {

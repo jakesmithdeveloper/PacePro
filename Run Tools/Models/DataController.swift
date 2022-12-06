@@ -35,8 +35,8 @@ class DataController: ObservableObject {
         }
         
         let race = Race(context: viewContext)
-        race.date = Calendar.current.date(from: DateComponents(year: 2022, month: 3, day: 5))!
-        race.name = "Attack Addiction 5k"
+        race.date = Calendar.current.date(from: DateComponents(year: 2022, month: 12, day: 3))!
+        race.name = "Rehoboth Marathon festival"
         
         try viewContext.save()
     }
