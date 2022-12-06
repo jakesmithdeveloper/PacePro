@@ -32,6 +32,8 @@
 		87B22E9D28EB36D2002404C9 /* CalendarKeyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B22E9C28EB36D2002404C9 /* CalendarKeyView.swift */; };
 		87B9AB6128DB52A100233CA6 /* DateResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B9AB6028DB52A100233CA6 /* DateResult.swift */; };
 		87C0AF9028EB595E00839FF4 /* RaceDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C0AF8F28EB595E00839FF4 /* RaceDetailView.swift */; };
+		87C4BD622937E1CE00EA5B60 /* RaceImgLogoPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C4BD612937E1CE00EA5B60 /* RaceImgLogoPicker.swift */; };
+		87C4BD642937E44E00EA5B60 /* RaceLogoPickers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C4BD632937E44E00EA5B60 /* RaceLogoPickers.swift */; };
 		87D23E1528DCA4F7006EE1A3 /* StartDateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87D23E1428DCA4F7006EE1A3 /* StartDateView.swift */; };
 		87D23E1728DCB253006EE1A3 /* RaceDateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87D23E1628DCB253006EE1A3 /* RaceDateView.swift */; };
 		87D23E1A28DCD31E006EE1A3 /* Pace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87D23E1928DCD31E006EE1A3 /* Pace.swift */; };
@@ -83,6 +85,8 @@
 		87B22E9C28EB36D2002404C9 /* CalendarKeyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarKeyView.swift; sourceTree = "<group>"; };
 		87B9AB6028DB52A100233CA6 /* DateResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateResult.swift; sourceTree = "<group>"; };
 		87C0AF8F28EB595E00839FF4 /* RaceDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceDetailView.swift; sourceTree = "<group>"; };
+		87C4BD612937E1CE00EA5B60 /* RaceImgLogoPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceImgLogoPicker.swift; sourceTree = "<group>"; };
+		87C4BD632937E44E00EA5B60 /* RaceLogoPickers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceLogoPickers.swift; sourceTree = "<group>"; };
 		87D23E1428DCA4F7006EE1A3 /* StartDateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartDateView.swift; sourceTree = "<group>"; };
 		87D23E1628DCB253006EE1A3 /* RaceDateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceDateView.swift; sourceTree = "<group>"; };
 		87D23E1928DCD31E006EE1A3 /* Pace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pace.swift; sourceTree = "<group>"; };
@@ -144,6 +148,8 @@
 				878D5AEE28E148BC007F2BE7 /* RaceView.swift */,
 				8724F450292D253800700C14 /* RaceEditView.swift */,
 				87C0AF8F28EB595E00839FF4 /* RaceDetailView.swift */,
+				87C4BD632937E44E00EA5B60 /* RaceLogoPickers.swift */,
+				87C4BD612937E1CE00EA5B60 /* RaceImgLogoPicker.swift */,
 			);
 			path = "Race Views";
 			sourceTree = "<group>";
@@ -389,12 +395,14 @@
 				878D5AEF28E148BC007F2BE7 /* RaceView.swift in Sources */,
 				87ADFE2A28DB475C00B24A8C /* TrainingBlockLengthView.swift in Sources */,
 				87F3E94728E23435008C630F /* TextFieldWithText.swift in Sources */,
+				87C4BD622937E1CE00EA5B60 /* RaceImgLogoPicker.swift in Sources */,
 				87ADFE2828DA44B000B24A8C /* DateCalculatorView.swift in Sources */,
 				87DF7EA928D90D65003D7E9F /* ContentView.swift in Sources */,
 				87297C9B28DDF18A001550C1 /* DataController.swift in Sources */,
 				87061F3128EC5E73009FE969 /* OpenGraphData.swift in Sources */,
 				8752D18728E72BA100C47317 /* Calendar-ViewModel.swift in Sources */,
 				87D23E1A28DCD31E006EE1A3 /* Pace.swift in Sources */,
+				87C4BD642937E44E00EA5B60 /* RaceLogoPickers.swift in Sources */,
 				87B9AB6128DB52A100233CA6 /* DateResult.swift in Sources */,
 				87DF7EA728D90D65003D7E9F /* RunnerToolsApp.swift in Sources */,
 				87D23E1528DCA4F7006EE1A3 /* StartDateView.swift in Sources */,

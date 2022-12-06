@@ -35,7 +35,7 @@ extension Race {
     }
     
     var raceEdit: Bool {
-        edit ?? false
+        edit
     }
     
     // Display Strings

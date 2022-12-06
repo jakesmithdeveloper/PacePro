@@ -19,6 +19,9 @@ struct PresetDistanceView: View {
                 Text("5k") .onTapGesture {
                     vm.setDistanceInput(distance: "5", inputUnit: "kilometer")
                 }
+                Text("8k") .onTapGesture {
+                    vm.setDistanceInput(distance: "8", inputUnit: "kilometer")
+                }
                 Text("10k") .onTapGesture {
                     vm.setDistanceInput(distance: "10", inputUnit: "kilometer")
                 }
@@ -30,6 +33,8 @@ struct PresetDistanceView: View {
                 }
             }
             .padding(5)
+            .scaledToFit()
+            .bold()
             .foregroundColor(.white)
             .background {
                 Color.blue

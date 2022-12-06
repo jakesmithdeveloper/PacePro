@@ -14,9 +14,20 @@ struct RaceEditView: View {
     
     @State private var showingUrlAlert = false
     
+    @State private var showingColorPicker = false
+    
+    @State private var backgroundColor = Color.purple
+    @State private var textColor = Color.white
+    @State private var sfSymbol = "flag.checkered.2.crossed"
+    
     var body: some View {
         Form {
             Section("Race Information") {
+                RaceImgPlaceholder(raceName: vm.name, backgroundColor: backgroundColor, textColor: textColor, logo: sfSymbol)
+                    .onTapGesture {
+                        showingColorPicker = true
+                    }
+                
                 TextFieldWithText(userInput: $vm.name.onChange {
                     vm.update()
                 }, prompt: "Race Name:")
@@ -43,6 +54,9 @@ struct RaceEditView: View {
         }, message: {
             Text("The race url is used for creating a link to the race page, as well as displaying the race's preview image")
         })
+        .sheet(isPresented: $showingColorPicker) {
+            RaceLogoPickers(backgroundColor: $backgroundColor, textColor: $textColor, sfSymbol: $sfSymbol)
+        }
     }
 }
 

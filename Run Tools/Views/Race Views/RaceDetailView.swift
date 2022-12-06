@@ -8,25 +8,30 @@
 import SwiftUI
 
 struct RaceImgPlaceholder: View {
-    
-    @Environment(\.colorScheme) var colorScheme
-    
+
     let raceName: String
+    let backgroundColor: Color
+    let textColor: Color
+    let logo: String
     
     var body: some View {
         ZStack {
-            RoundedRectangle(cornerRadius: 20)
-                .fill(colorScheme == .dark ? Color.purple : Color(red: 0.101, green: 0.107, blue: 0.3))
-                .scaledToFit()
+            HStack {
+                Spacer()
+                RoundedRectangle(cornerRadius: 20)
+                    .fill(backgroundColor)
+                    .scaledToFit()
+                Spacer()
+            }
             VStack {
                 Text("\(raceName)")
                     .font(.largeTitle)
                     .bold()
-                    .foregroundColor(.white)
-                Image(systemName: "flag.checkered.2.crossed")
+                    .foregroundColor(textColor)
+                Image(systemName: logo)
                     .font(.system(size: 96))
                     .padding()
-                    .foregroundColor(.white)
+                    .foregroundColor(textColor)
             }
         }
     }
@@ -34,14 +39,27 @@ struct RaceImgPlaceholder: View {
 
 struct RaceDetailView: View {
     
+    
     let race: Race
+    
+    @Environment(\.colorScheme) var colorScheme
+    
     @ObservedObject var vm: RaceEditViewModel
+    
+    @State private var showingColorPicker = false
+    
+    @State private var backgroundColor = Color.purple
+    @State private var textColor = Color.white
+    @State private var sfSymbol = "flag.checkered.2.crossed"
     
     var body: some View {
         Form {
             Section("Race information") {
                 if vm.imgURL == "" || vm.imgURL == "no-image" {
-                    RaceImgPlaceholder(raceName: race.raceName)
+                    RaceImgPlaceholder(raceName: race.raceName, backgroundColor: backgroundColor, textColor: textColor, logo: sfSymbol)
+                        .onTapGesture {
+                            showingColorPicker = true
+                        }
                 } else {
                     AsyncImage(url: URL(string: vm.imgURL)!) { img in
                         img
@@ -49,7 +67,12 @@ struct RaceDetailView: View {
                             .scaledToFit()
                             
                     } placeholder: {
-                        RaceImgPlaceholder(raceName: race.raceName)
+                        ZStack {
+                            RaceImgPlaceholder(raceName: race.raceName, backgroundColor: backgroundColor, textColor: textColor, logo: sfSymbol)
+                                .onTapGesture {
+                                    showingColorPicker = true
+                                }
+                        }
                     }
                 }
                 
@@ -72,6 +95,9 @@ struct RaceDetailView: View {
                         .bold()
                 }
             }
+        }
+        .sheet(isPresented: $showingColorPicker) {
+            RaceLogoPickers(backgroundColor: $backgroundColor, textColor: $textColor, sfSymbol: $sfSymbol)
         }
     }
     
