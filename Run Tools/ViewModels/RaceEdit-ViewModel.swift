@@ -18,6 +18,9 @@ class RaceEditViewModel: ObservableObject {
     @Published var date: Date
     @Published var website: String
     @Published var imgURL: String
+    @Published var logoBackgroundColor: String
+    @Published var logoTextColor: String
+    @Published var logoSfSymbol: String
     @Published var requests = Set<AnyCancellable>()
     
     var raceUrl: URL? {
@@ -43,6 +46,9 @@ class RaceEditViewModel: ObservableObject {
         _date = Published(wrappedValue: race.raceDate)
         _website = Published(wrappedValue: race.raceWebsite)
         _imgURL = Published(wrappedValue: race.raceImgUrl)
+        _logoBackgroundColor = Published(wrappedValue: race.racelogoBackgroundColor)
+        _logoTextColor = Published(wrappedValue: race.raceLogoTextColor)
+        _logoSfSymbol = Published(wrappedValue: race.raceLogoSfSymbol)
     }
     
     func fetch<T: Decodable>(_ url: URL, defaultValue: T, completion: @escaping (T) -> Void) {
@@ -63,6 +69,9 @@ class RaceEditViewModel: ObservableObject {
         race.date = date
         race.website = website
         race.edit = false
+        race.logoBackgroundColor = logoBackgroundColor
+        race.logoTextColor = logoTextColor
+        race.logoSfSymbol = logoSfSymbol
     }
     
     func updateWithPhoto() {
@@ -70,10 +79,12 @@ class RaceEditViewModel: ObservableObject {
         race.name = name
         race.date = date
         race.website = website
+        race.logoBackgroundColor = logoBackgroundColor
+        race.logoTextColor = logoTextColor
+        race.logoSfSymbol = logoSfSymbol
         race.edit = false
         if let raceUrl = raceUrl {
             fetch(raceUrl, defaultValue: OpenGraphData.example) { data in
-                print("\(data.image)")
                 self.race.imgUrl = data.image
                 self.imgURL = data.image
             }

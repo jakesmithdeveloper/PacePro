@@ -38,6 +38,20 @@ extension Race {
         edit
     }
     
+    // Race Logo colors
+    
+    var racelogoBackgroundColor: String {
+        logoBackgroundColor ?? "#000080"
+    }
+    
+    var raceLogoTextColor: String {
+        logoTextColor ?? "#FFFFFF"
+    }
+    
+    var raceLogoSfSymbol: String {
+        logoSfSymbol ?? "figure.run"
+    }
+    
     // Display Strings
     var raceDateString: String? {
         let df = DateFormatter()

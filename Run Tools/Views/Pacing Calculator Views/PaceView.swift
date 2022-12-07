@@ -80,7 +80,7 @@ struct PaceView: View {
                         .padding()
                     }
                     
-                    Text("\(showingExplanation ? "hide" : "show info")")
+                    Text("\(showingExplanation ? "hide" : "show info  ")")
                         .onTapGesture {
                             withAnimation {
                                 showingExplanation.toggle()
