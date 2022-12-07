@@ -27,7 +27,7 @@ struct TrainingBlockLengthView: View {
                         .bold()
                 }
 
-                if vm.trainingBlockResult.dateResultString != " " {
+                if !vm.trainingBlockResult.isEmpty {
                     Section("calendar") {
                         CalendarView(start: vm.startDate, end: vm.raceDate)
                     }

@@ -30,4 +30,8 @@ struct DateResult {
     var dateResultString: String {
         "\(weeksString) \(daysString)"
     }
+    
+    var isEmpty: Bool {
+        return dateResultString == " "
+    }
 }

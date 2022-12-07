@@ -9,9 +9,10 @@ import SwiftUI
 
 struct RaceLogoPickers: View {
     
-    @Binding var backgroundColor: Color
-    @Binding var textColor: Color
-    @Binding var sfSymbol: String
+    @ObservedObject var vm: RaceEditViewModel
+    
+    @State private var bgColor: Color
+    @State private var foreGroundColor: Color
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -21,27 +22,30 @@ struct RaceLogoPickers: View {
             Group {
                 HStack {
                     Text("Background Color: ")
-                    ColorPicker("Background Color", selection: $backgroundColor)
+                    ColorPicker("Background Color", selection: $bgColor.onChange {
+                        vm.logoBackgroundColor = bgColor.toHex() ?? "#FFFFFF"
+                    })
                         .labelsHidden()
                 }
                 HStack {
                     Text("Text Color: ")
-                    ColorPicker("Text Color", selection: $textColor)
+                    ColorPicker("Text Color", selection: $foreGroundColor.onChange {
+                        vm.logoTextColor = foreGroundColor.toHex() ?? "#000000"
+                    })
                         .labelsHidden()
                 }
-                RaceImgLogoPicker(logoName: $sfSymbol)
+                RaceImgLogoPicker(logoName: $vm.logoSfSymbol)
             }
             .presentationDetents([ .fraction(0.3), .medium])
         }
     }
-}
-
-struct RaceLogoPickers_Previews: PreviewProvider {
-    @State static private var backgroundColor: Color = .blue
-    @State static private var textCOlor: Color = .white
-    @State static private var sfSymbol: String = "figure.track.and.field"
     
-    static var previews: some View {
-        RaceLogoPickers(backgroundColor: $backgroundColor, textColor: $textCOlor, sfSymbol: $sfSymbol)
+    init(vm: RaceEditViewModel) {
+        self.vm = vm
+        
+        _bgColor = State(wrappedValue: Color(hex: vm.logoBackgroundColor) ?? .blue)
+        _foreGroundColor = State(wrappedValue: Color(hex: vm.logoTextColor) ?? .white)
+        
     }
+    
 }

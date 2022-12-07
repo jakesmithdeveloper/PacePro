@@ -16,10 +16,12 @@
 		8752D18528E72AE100C47317 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8752D18428E72AE100C47317 /* CalendarView.swift */; };
 		8752D18728E72BA100C47317 /* Calendar-ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8752D18628E72BA100C47317 /* Calendar-ViewModel.swift */; };
 		8752D18928E72E7300C47317 /* MonthPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8752D18828E72E7300C47317 /* MonthPicker.swift */; };
+		878C0464293F988C00B91EF0 /* CalendarStatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878C0463293F988C00B91EF0 /* CalendarStatsView.swift */; };
 		878D5AEF28E148BC007F2BE7 /* RaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878D5AEE28E148BC007F2BE7 /* RaceView.swift */; };
 		878D5AF128E14958007F2BE7 /* Race-CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878D5AF028E14958007F2BE7 /* Race-CoreDataHelper.swift */; };
 		878D935D28EDCB51001D98DE /* RunnerToolsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878D935C28EDCB51001D98DE /* RunnerToolsTests.swift */; };
 		878D936628EDCE42001D98DE /* RaceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878D936528EDCE42001D98DE /* RaceTests.swift */; };
+		878DDAA029411827006EE526 /* Color-Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878DDA9F29411827006EE526 /* Color-Extensions.swift */; };
 		879BEECF28EF23FD003AE161 /* DevelopmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879BEECE28EF23FD003AE161 /* DevelopmentTests.swift */; };
 		87A1D29828E5DE2800818689 /* PresetDistanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A1D29728E5DE2800818689 /* PresetDistanceView.swift */; };
 		87A1D29A28E5E20A00818689 /* Date-ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A1D29928E5E20A00818689 /* Date-ViewModel.swift */; };
@@ -46,6 +48,7 @@
 		87E599BB28E1DC890083E1C3 /* Binding-OnChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E599BA28E1DC890083E1C3 /* Binding-OnChange.swift */; };
 		87F3E94728E23435008C630F /* TextFieldWithText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F3E94628E23435008C630F /* TextFieldWithText.swift */; };
 		87F3E94928E2542B008C630F /* RaceEdit-ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F3E94828E2542B008C630F /* RaceEdit-ViewModel.swift */; };
+		87F465A32940EAF600E388E6 /* RaceImgPlaceholderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F465A22940EAF600E388E6 /* RaceImgPlaceholderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,11 +71,13 @@
 		8752D18428E72AE100C47317 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		8752D18628E72BA100C47317 /* Calendar-ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Calendar-ViewModel.swift"; sourceTree = "<group>"; };
 		8752D18828E72E7300C47317 /* MonthPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthPicker.swift; sourceTree = "<group>"; };
+		878C0463293F988C00B91EF0 /* CalendarStatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarStatsView.swift; sourceTree = "<group>"; };
 		878D5AEE28E148BC007F2BE7 /* RaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceView.swift; sourceTree = "<group>"; };
 		878D5AF028E14958007F2BE7 /* Race-CoreDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Race-CoreDataHelper.swift"; sourceTree = "<group>"; };
 		878D935A28EDCB51001D98DE /* Run ToolsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Run ToolsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		878D935C28EDCB51001D98DE /* RunnerToolsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunnerToolsTests.swift; sourceTree = "<group>"; };
 		878D936528EDCE42001D98DE /* RaceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceTests.swift; sourceTree = "<group>"; };
+		878DDA9F29411827006EE526 /* Color-Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color-Extensions.swift"; sourceTree = "<group>"; };
 		879BEECE28EF23FD003AE161 /* DevelopmentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevelopmentTests.swift; sourceTree = "<group>"; };
 		87A1D29728E5DE2800818689 /* PresetDistanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresetDistanceView.swift; sourceTree = "<group>"; };
 		87A1D29928E5E20A00818689 /* Date-ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date-ViewModel.swift"; sourceTree = "<group>"; };
@@ -100,6 +105,7 @@
 		87E599BA28E1DC890083E1C3 /* Binding-OnChange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Binding-OnChange.swift"; sourceTree = "<group>"; };
 		87F3E94628E23435008C630F /* TextFieldWithText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldWithText.swift; sourceTree = "<group>"; };
 		87F3E94828E2542B008C630F /* RaceEdit-ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RaceEdit-ViewModel.swift"; sourceTree = "<group>"; };
+		87F465A22940EAF600E388E6 /* RaceImgPlaceholderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceImgPlaceholderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +154,7 @@
 				878D5AEE28E148BC007F2BE7 /* RaceView.swift */,
 				8724F450292D253800700C14 /* RaceEditView.swift */,
 				87C0AF8F28EB595E00839FF4 /* RaceDetailView.swift */,
+				87F465A22940EAF600E388E6 /* RaceImgPlaceholderView.swift */,
 				87C4BD632937E44E00EA5B60 /* RaceLogoPickers.swift */,
 				87C4BD612937E1CE00EA5B60 /* RaceImgLogoPicker.swift */,
 			);
@@ -193,6 +200,7 @@
 				87E599BA28E1DC890083E1C3 /* Binding-OnChange.swift */,
 				87297C9A28DDF18A001550C1 /* DataController.swift */,
 				87B9AB6028DB52A100233CA6 /* DateResult.swift */,
+				878DDA9F29411827006EE526 /* Color-Extensions.swift */,
 				87297C9728DDF142001550C1 /* Main.xcdatamodeld */,
 				87061F3028EC5E73009FE969 /* OpenGraphData.swift */,
 				87D23E1928DCD31E006EE1A3 /* Pace.swift */,
@@ -216,6 +224,7 @@
 		87D23E1828DCB5F5006EE1A3 /* DateViews */ = {
 			isa = PBXGroup;
 			children = (
+				878C0463293F988C00B91EF0 /* CalendarStatsView.swift */,
 				87ADFE2728DA44B000B24A8C /* DateCalculatorView.swift */,
 				87ADFE2928DB475C00B24A8C /* TrainingBlockLengthView.swift */,
 				87D23E1428DCA4F7006EE1A3 /* StartDateView.swift */,
@@ -374,7 +383,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				87D23E2028DCDB70006EE1A3 /* GoalPaceView.swift in Sources */,
+				87F465A32940EAF600E388E6 /* RaceImgPlaceholderView.swift in Sources */,
 				87C0AF9028EB595E00839FF4 /* RaceDetailView.swift in Sources */,
+				878DDAA029411827006EE526 /* Color-Extensions.swift in Sources */,
 				878D5AF128E14958007F2BE7 /* Race-CoreDataHelper.swift in Sources */,
 				8752D18528E72AE100C47317 /* CalendarView.swift in Sources */,
 				8724F44F292D1E3300700C14 /* DateExtension.swift in Sources */,
@@ -392,6 +403,7 @@
 				87B22E9D28EB36D2002404C9 /* CalendarKeyView.swift in Sources */,
 				87D23E1728DCB253006EE1A3 /* RaceDateView.swift in Sources */,
 				87A1D29A28E5E20A00818689 /* Date-ViewModel.swift in Sources */,
+				878C0464293F988C00B91EF0 /* CalendarStatsView.swift in Sources */,
 				878D5AEF28E148BC007F2BE7 /* RaceView.swift in Sources */,
 				87ADFE2A28DB475C00B24A8C /* TrainingBlockLengthView.swift in Sources */,
 				87F3E94728E23435008C630F /* TextFieldWithText.swift in Sources */,
