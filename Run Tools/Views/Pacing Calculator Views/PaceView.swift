@@ -57,7 +57,7 @@ struct PaceView: View {
                     .paceCalcNav()
 
                     NavigationLink {
-                        GoalTimeView()
+                        TrackModePaceView()
                     } label: {
                         Label("Track Workout", systemImage: "stopwatch")
                     }

@@ -38,7 +38,7 @@ struct RaceEditView: View {
             Section("Race Information") {
                 TextFieldWithText(userInput: $vm.name.onChange {
                     vm.update()
-                }, prompt: "Race Name:")
+                }, prompt: "Race Name:", placeholder: "")
                 
                 DatePicker("race date", selection: $vm.date.onChange {
                     vm.update()
@@ -54,7 +54,7 @@ struct RaceEditView: View {
 
                     TextFieldWithText(userInput: $vm.website.onChange {
                         vm.update()
-                    }, prompt: "Race website:")
+                    }, prompt: "Race website:", placeholder: "url")
                 }
             }
         }
