@@ -16,6 +16,7 @@
 		8752D18528E72AE100C47317 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8752D18428E72AE100C47317 /* CalendarView.swift */; };
 		8752D18728E72BA100C47317 /* Calendar-ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8752D18628E72BA100C47317 /* Calendar-ViewModel.swift */; };
 		8752D18928E72E7300C47317 /* MonthPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8752D18828E72E7300C47317 /* MonthPicker.swift */; };
+		876287702947D87800F4AB2D /* TrackMode-ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8762876F2947D87800F4AB2D /* TrackMode-ViewModel.swift */; };
 		87763FF12943CC17008C4E47 /* TrackDistancePresets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87763FF02943CC17008C4E47 /* TrackDistancePresets.swift */; };
 		878C0464293F988C00B91EF0 /* CalendarStatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878C0463293F988C00B91EF0 /* CalendarStatsView.swift */; };
 		878D5AEF28E148BC007F2BE7 /* RaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878D5AEE28E148BC007F2BE7 /* RaceView.swift */; };
@@ -73,6 +74,7 @@
 		8752D18428E72AE100C47317 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		8752D18628E72BA100C47317 /* Calendar-ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Calendar-ViewModel.swift"; sourceTree = "<group>"; };
 		8752D18828E72E7300C47317 /* MonthPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthPicker.swift; sourceTree = "<group>"; };
+		8762876F2947D87800F4AB2D /* TrackMode-ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TrackMode-ViewModel.swift"; sourceTree = "<group>"; };
 		87763FF02943CC17008C4E47 /* TrackDistancePresets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackDistancePresets.swift; sourceTree = "<group>"; };
 		878C0463293F988C00B91EF0 /* CalendarStatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarStatsView.swift; sourceTree = "<group>"; };
 		878D5AEE28E148BC007F2BE7 /* RaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceView.swift; sourceTree = "<group>"; };
@@ -181,6 +183,7 @@
 			children = (
 				87D23E1F28DCDB70006EE1A3 /* GoalPaceView.swift */,
 				878DDAA129413410006EE526 /* TrackModePaceView.swift */,
+				8762876F2947D87800F4AB2D /* TrackMode-ViewModel.swift */,
 				87A9969428DD114900EA335F /* GoalTimeView.swift */,
 				87D23E1B28DCD657006EE1A3 /* PaceView.swift */,
 			);
@@ -411,6 +414,7 @@
 				87A1D29A28E5E20A00818689 /* Date-ViewModel.swift in Sources */,
 				87763FF12943CC17008C4E47 /* TrackDistancePresets.swift in Sources */,
 				878C0464293F988C00B91EF0 /* CalendarStatsView.swift in Sources */,
+				876287702947D87800F4AB2D /* TrackMode-ViewModel.swift in Sources */,
 				878D5AEF28E148BC007F2BE7 /* RaceView.swift in Sources */,
 				87ADFE2A28DB475C00B24A8C /* TrainingBlockLengthView.swift in Sources */,
 				87F3E94728E23435008C630F /* TextFieldWithText.swift in Sources */,
