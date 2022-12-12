@@ -17,7 +17,7 @@ struct ContentView: View {
             
             PaceView()
                 .tabItem {
-                    Label("Pace", systemImage: "speedometer")
+                    Label("Pace", systemImage: "stopwatch")
                 }
             
             DateCalculatorView()

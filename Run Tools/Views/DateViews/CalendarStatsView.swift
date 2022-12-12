@@ -42,6 +42,15 @@ struct CalendarStatsView: View {
         }
     }
     
+    var lastDayOfYear: Date {
+        let year = Calendar.current.component(.year, from: Date())
+        if let lastOfYear = Calendar.current.date(from: DateComponents(year: year, month: 12, day: 31)) {
+            return lastOfYear
+        } else {
+            return Date()
+        }
+    }
+    
     var weekOfYearRatio: String {
         let weekOfYear = Calendar.current.component(.weekOfYear, from: Date()) - 1
         return "\(weekOfYear) of 52"
@@ -63,7 +72,7 @@ struct CalendarStatsView: View {
                 BoldCategory(beforeColon: "Current Date", afterColon: dateAsString)
                 BoldCategory(beforeColon: "Month", afterColon: monthOfYearRatio)
                 BoldCategory(beforeColon: "Week", afterColon: weekOfYearRatio)
-                BoldCategory(beforeColon: "Remaining Year", afterColon: vm.computeTrainingBlockLength(start: Date(), end: firstdayOfNextYear).dateResultString)
+                BoldCategory(beforeColon: "Remaining Year", afterColon: vm.computeTrainingBlockLength(start: Date(), end: lastDayOfYear).dateResultString)
             }
         }
         .padding()

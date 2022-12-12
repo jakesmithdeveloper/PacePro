@@ -16,12 +16,14 @@
 		8752D18528E72AE100C47317 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8752D18428E72AE100C47317 /* CalendarView.swift */; };
 		8752D18728E72BA100C47317 /* Calendar-ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8752D18628E72BA100C47317 /* Calendar-ViewModel.swift */; };
 		8752D18928E72E7300C47317 /* MonthPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8752D18828E72E7300C47317 /* MonthPicker.swift */; };
+		87763FF12943CC17008C4E47 /* TrackDistancePresets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87763FF02943CC17008C4E47 /* TrackDistancePresets.swift */; };
 		878C0464293F988C00B91EF0 /* CalendarStatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878C0463293F988C00B91EF0 /* CalendarStatsView.swift */; };
 		878D5AEF28E148BC007F2BE7 /* RaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878D5AEE28E148BC007F2BE7 /* RaceView.swift */; };
 		878D5AF128E14958007F2BE7 /* Race-CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878D5AF028E14958007F2BE7 /* Race-CoreDataHelper.swift */; };
 		878D935D28EDCB51001D98DE /* RunnerToolsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878D935C28EDCB51001D98DE /* RunnerToolsTests.swift */; };
 		878D936628EDCE42001D98DE /* RaceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878D936528EDCE42001D98DE /* RaceTests.swift */; };
 		878DDAA029411827006EE526 /* Color-Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878DDA9F29411827006EE526 /* Color-Extensions.swift */; };
+		878DDAA229413410006EE526 /* TrackModePaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878DDAA129413410006EE526 /* TrackModePaceView.swift */; };
 		879BEECF28EF23FD003AE161 /* DevelopmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879BEECE28EF23FD003AE161 /* DevelopmentTests.swift */; };
 		87A1D29828E5DE2800818689 /* PresetDistanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A1D29728E5DE2800818689 /* PresetDistanceView.swift */; };
 		87A1D29A28E5E20A00818689 /* Date-ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A1D29928E5E20A00818689 /* Date-ViewModel.swift */; };
@@ -71,6 +73,7 @@
 		8752D18428E72AE100C47317 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		8752D18628E72BA100C47317 /* Calendar-ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Calendar-ViewModel.swift"; sourceTree = "<group>"; };
 		8752D18828E72E7300C47317 /* MonthPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthPicker.swift; sourceTree = "<group>"; };
+		87763FF02943CC17008C4E47 /* TrackDistancePresets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackDistancePresets.swift; sourceTree = "<group>"; };
 		878C0463293F988C00B91EF0 /* CalendarStatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarStatsView.swift; sourceTree = "<group>"; };
 		878D5AEE28E148BC007F2BE7 /* RaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceView.swift; sourceTree = "<group>"; };
 		878D5AF028E14958007F2BE7 /* Race-CoreDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Race-CoreDataHelper.swift"; sourceTree = "<group>"; };
@@ -78,6 +81,7 @@
 		878D935C28EDCB51001D98DE /* RunnerToolsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunnerToolsTests.swift; sourceTree = "<group>"; };
 		878D936528EDCE42001D98DE /* RaceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceTests.swift; sourceTree = "<group>"; };
 		878DDA9F29411827006EE526 /* Color-Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color-Extensions.swift"; sourceTree = "<group>"; };
+		878DDAA129413410006EE526 /* TrackModePaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackModePaceView.swift; sourceTree = "<group>"; };
 		879BEECE28EF23FD003AE161 /* DevelopmentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevelopmentTests.swift; sourceTree = "<group>"; };
 		87A1D29728E5DE2800818689 /* PresetDistanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresetDistanceView.swift; sourceTree = "<group>"; };
 		87A1D29928E5E20A00818689 /* Date-ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date-ViewModel.swift"; sourceTree = "<group>"; };
@@ -132,6 +136,7 @@
 				87F3E94628E23435008C630F /* TextFieldWithText.swift */,
 				87ADFE2B28DB4A8500B24A8C /* CenteredButtonView.swift */,
 				87A1D29728E5DE2800818689 /* PresetDistanceView.swift */,
+				87763FF02943CC17008C4E47 /* TrackDistancePresets.swift */,
 			);
 			path = "utility views";
 			sourceTree = "<group>";
@@ -175,6 +180,7 @@
 			isa = PBXGroup;
 			children = (
 				87D23E1F28DCDB70006EE1A3 /* GoalPaceView.swift */,
+				878DDAA129413410006EE526 /* TrackModePaceView.swift */,
 				87A9969428DD114900EA335F /* GoalTimeView.swift */,
 				87D23E1B28DCD657006EE1A3 /* PaceView.swift */,
 			);
@@ -403,6 +409,7 @@
 				87B22E9D28EB36D2002404C9 /* CalendarKeyView.swift in Sources */,
 				87D23E1728DCB253006EE1A3 /* RaceDateView.swift in Sources */,
 				87A1D29A28E5E20A00818689 /* Date-ViewModel.swift in Sources */,
+				87763FF12943CC17008C4E47 /* TrackDistancePresets.swift in Sources */,
 				878C0464293F988C00B91EF0 /* CalendarStatsView.swift in Sources */,
 				878D5AEF28E148BC007F2BE7 /* RaceView.swift in Sources */,
 				87ADFE2A28DB475C00B24A8C /* TrainingBlockLengthView.swift in Sources */,
@@ -410,6 +417,7 @@
 				87C4BD622937E1CE00EA5B60 /* RaceImgLogoPicker.swift in Sources */,
 				87ADFE2828DA44B000B24A8C /* DateCalculatorView.swift in Sources */,
 				87DF7EA928D90D65003D7E9F /* ContentView.swift in Sources */,
+				878DDAA229413410006EE526 /* TrackModePaceView.swift in Sources */,
 				87297C9B28DDF18A001550C1 /* DataController.swift in Sources */,
 				87061F3128EC5E73009FE969 /* OpenGraphData.swift in Sources */,
 				8752D18728E72BA100C47317 /* Calendar-ViewModel.swift in Sources */,

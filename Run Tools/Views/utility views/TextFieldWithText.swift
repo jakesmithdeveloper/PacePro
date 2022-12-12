@@ -11,11 +11,12 @@ struct TextFieldWithText: View {
     
     @Binding var userInput: String
     let prompt: String
+    let placeholder: String
     
     var body: some View {
         HStack {
             Text(prompt)
-            TextField(prompt, text: $userInput)
+            TextField(placeholder, text: $userInput)
         }
     }
 }
