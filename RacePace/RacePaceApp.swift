@@ -8,7 +8,7 @@
 import SwiftUI
 
 @main
-struct RunnerToolsApp: App {
+struct RacePaceApp: App {
     
     @StateObject var dataController: DataController
     

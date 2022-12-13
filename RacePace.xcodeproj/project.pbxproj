@@ -16,6 +16,7 @@
 		8752D18528E72AE100C47317 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8752D18428E72AE100C47317 /* CalendarView.swift */; };
 		8752D18728E72BA100C47317 /* Calendar-ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8752D18628E72BA100C47317 /* Calendar-ViewModel.swift */; };
 		8752D18928E72E7300C47317 /* MonthPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8752D18828E72E7300C47317 /* MonthPicker.swift */; };
+		875878002948B2C7009FACD2 /* BoldCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875877FF2948B2C7009FACD2 /* BoldCategoryView.swift */; };
 		876287702947D87800F4AB2D /* TrackMode-ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8762876F2947D87800F4AB2D /* TrackMode-ViewModel.swift */; };
 		87763FF12943CC17008C4E47 /* TrackDistancePresets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87763FF02943CC17008C4E47 /* TrackDistancePresets.swift */; };
 		878C0464293F988C00B91EF0 /* CalendarStatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878C0463293F988C00B91EF0 /* CalendarStatsView.swift */; };
@@ -44,7 +45,7 @@
 		87D23E1A28DCD31E006EE1A3 /* Pace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87D23E1928DCD31E006EE1A3 /* Pace.swift */; };
 		87D23E1C28DCD657006EE1A3 /* PaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87D23E1B28DCD657006EE1A3 /* PaceView.swift */; };
 		87D23E2028DCDB70006EE1A3 /* GoalPaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87D23E1F28DCDB70006EE1A3 /* GoalPaceView.swift */; };
-		87DF7EA728D90D65003D7E9F /* RunnerToolsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DF7EA628D90D65003D7E9F /* RunnerToolsApp.swift */; };
+		87DF7EA728D90D65003D7E9F /* RacePaceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DF7EA628D90D65003D7E9F /* RacePaceApp.swift */; };
 		87DF7EA928D90D65003D7E9F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DF7EA828D90D65003D7E9F /* ContentView.swift */; };
 		87DF7EAB28D90D65003D7E9F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87DF7EAA28D90D65003D7E9F /* Assets.xcassets */; };
 		87DF7EAE28D90D65003D7E9F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87DF7EAD28D90D65003D7E9F /* Preview Assets.xcassets */; };
@@ -74,12 +75,13 @@
 		8752D18428E72AE100C47317 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		8752D18628E72BA100C47317 /* Calendar-ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Calendar-ViewModel.swift"; sourceTree = "<group>"; };
 		8752D18828E72E7300C47317 /* MonthPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthPicker.swift; sourceTree = "<group>"; };
+		875877FF2948B2C7009FACD2 /* BoldCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoldCategoryView.swift; sourceTree = "<group>"; };
 		8762876F2947D87800F4AB2D /* TrackMode-ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TrackMode-ViewModel.swift"; sourceTree = "<group>"; };
 		87763FF02943CC17008C4E47 /* TrackDistancePresets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackDistancePresets.swift; sourceTree = "<group>"; };
 		878C0463293F988C00B91EF0 /* CalendarStatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarStatsView.swift; sourceTree = "<group>"; };
 		878D5AEE28E148BC007F2BE7 /* RaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceView.swift; sourceTree = "<group>"; };
 		878D5AF028E14958007F2BE7 /* Race-CoreDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Race-CoreDataHelper.swift"; sourceTree = "<group>"; };
-		878D935A28EDCB51001D98DE /* Run ToolsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Run ToolsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		878D935A28EDCB51001D98DE /* RacePaceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RacePaceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		878D935C28EDCB51001D98DE /* RunnerToolsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunnerToolsTests.swift; sourceTree = "<group>"; };
 		878D936528EDCE42001D98DE /* RaceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceTests.swift; sourceTree = "<group>"; };
 		878DDA9F29411827006EE526 /* Color-Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color-Extensions.swift"; sourceTree = "<group>"; };
@@ -103,8 +105,8 @@
 		87D23E1928DCD31E006EE1A3 /* Pace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pace.swift; sourceTree = "<group>"; };
 		87D23E1B28DCD657006EE1A3 /* PaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaceView.swift; sourceTree = "<group>"; };
 		87D23E1F28DCDB70006EE1A3 /* GoalPaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalPaceView.swift; sourceTree = "<group>"; };
-		87DF7EA328D90D65003D7E9F /* Run Tools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Run Tools.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		87DF7EA628D90D65003D7E9F /* RunnerToolsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunnerToolsApp.swift; sourceTree = "<group>"; };
+		87DF7EA328D90D65003D7E9F /* RacePace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RacePace.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		87DF7EA628D90D65003D7E9F /* RacePaceApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RacePaceApp.swift; sourceTree = "<group>"; };
 		87DF7EA828D90D65003D7E9F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		87DF7EAA28D90D65003D7E9F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		87DF7EAD28D90D65003D7E9F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -135,6 +137,7 @@
 		87297C9628DDF126001550C1 /* utility views */ = {
 			isa = PBXGroup;
 			children = (
+				875877FF2948B2C7009FACD2 /* BoldCategoryView.swift */,
 				87F3E94628E23435008C630F /* TextFieldWithText.swift */,
 				87ADFE2B28DB4A8500B24A8C /* CenteredButtonView.swift */,
 				87A1D29728E5DE2800818689 /* PresetDistanceView.swift */,
@@ -154,6 +157,16 @@
 			path = "Calendar Views";
 			sourceTree = "<group>";
 		};
+		875877FE2948B19E009FACD2 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				87E599BA28E1DC890083E1C3 /* Binding-OnChange.swift */,
+				8724F44E292D1E3300700C14 /* DateExtension.swift */,
+				878DDA9F29411827006EE526 /* Color-Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		878D935528EDC613001D98DE /* Race Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -168,14 +181,14 @@
 			path = "Race Views";
 			sourceTree = "<group>";
 		};
-		878D935B28EDCB51001D98DE /* RunnerToolsTests */ = {
+		878D935B28EDCB51001D98DE /* RacePaceTests */ = {
 			isa = PBXGroup;
 			children = (
 				878D935C28EDCB51001D98DE /* RunnerToolsTests.swift */,
 				878D936528EDCE42001D98DE /* RaceTests.swift */,
 				879BEECE28EF23FD003AE161 /* DevelopmentTests.swift */,
 			);
-			path = RunnerToolsTests;
+			path = RacePaceTests;
 			sourceTree = "<group>";
 		};
 		87A9969628DD15AF00EA335F /* Pacing Calculator Views */ = {
@@ -183,7 +196,6 @@
 			children = (
 				87D23E1F28DCDB70006EE1A3 /* GoalPaceView.swift */,
 				878DDAA129413410006EE526 /* TrackModePaceView.swift */,
-				8762876F2947D87800F4AB2D /* TrackMode-ViewModel.swift */,
 				87A9969428DD114900EA335F /* GoalTimeView.swift */,
 				87D23E1B28DCD657006EE1A3 /* PaceView.swift */,
 			);
@@ -206,10 +218,8 @@
 		87ADFE2528DA435200B24A8C /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				87E599BA28E1DC890083E1C3 /* Binding-OnChange.swift */,
 				87297C9A28DDF18A001550C1 /* DataController.swift */,
 				87B9AB6028DB52A100233CA6 /* DateResult.swift */,
-				878DDA9F29411827006EE526 /* Color-Extensions.swift */,
 				87297C9728DDF142001550C1 /* Main.xcdatamodeld */,
 				87061F3028EC5E73009FE969 /* OpenGraphData.swift */,
 				87D23E1928DCD31E006EE1A3 /* Pace.swift */,
@@ -222,10 +232,10 @@
 			isa = PBXGroup;
 			children = (
 				8752D18628E72BA100C47317 /* Calendar-ViewModel.swift */,
+				87A1D29928E5E20A00818689 /* Date-ViewModel.swift */,
 				87A4A52F28DD4AC3006D91A1 /* Pace-ViewModel.swift */,
 				87F3E94828E2542B008C630F /* RaceEdit-ViewModel.swift */,
-				87A1D29928E5E20A00818689 /* Date-ViewModel.swift */,
-				8724F44E292D1E3300700C14 /* DateExtension.swift */,
+				8762876F2947D87800F4AB2D /* TrackMode-ViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -245,8 +255,8 @@
 		87DF7E9A28D90D65003D7E9F = {
 			isa = PBXGroup;
 			children = (
-				87DF7EA528D90D65003D7E9F /* Run Tools */,
-				878D935B28EDCB51001D98DE /* RunnerToolsTests */,
+				87DF7EA528D90D65003D7E9F /* RacePace */,
+				878D935B28EDCB51001D98DE /* RacePaceTests */,
 				87DF7EA428D90D65003D7E9F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -254,23 +264,24 @@
 		87DF7EA428D90D65003D7E9F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				87DF7EA328D90D65003D7E9F /* Run Tools.app */,
-				878D935A28EDCB51001D98DE /* Run ToolsTests.xctest */,
+				87DF7EA328D90D65003D7E9F /* RacePace.app */,
+				878D935A28EDCB51001D98DE /* RacePaceTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		87DF7EA528D90D65003D7E9F /* Run Tools */ = {
+		87DF7EA528D90D65003D7E9F /* RacePace */ = {
 			isa = PBXGroup;
 			children = (
-				87DF7EA628D90D65003D7E9F /* RunnerToolsApp.swift */,
+				87DF7EA628D90D65003D7E9F /* RacePaceApp.swift */,
+				875877FE2948B19E009FACD2 /* Extensions */,
 				87ADFE2528DA435200B24A8C /* Models */,
 				87ADFE2428DA434900B24A8C /* Views */,
 				87ADFE2628DA435A00B24A8C /* ViewModels */,
 				87DF7EAA28D90D65003D7E9F /* Assets.xcassets */,
 				87DF7EAC28D90D65003D7E9F /* Preview Content */,
 			);
-			path = "Run Tools";
+			path = RacePace;
 			sourceTree = "<group>";
 		};
 		87DF7EAC28D90D65003D7E9F /* Preview Content */ = {
@@ -284,9 +295,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		878D935928EDCB51001D98DE /* Run ToolsTests */ = {
+		878D935928EDCB51001D98DE /* RacePaceTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 878D936028EDCB51001D98DE /* Build configuration list for PBXNativeTarget "Run ToolsTests" */;
+			buildConfigurationList = 878D936028EDCB51001D98DE /* Build configuration list for PBXNativeTarget "RacePaceTests" */;
 			buildPhases = (
 				878D935628EDCB51001D98DE /* Sources */,
 				878D935728EDCB51001D98DE /* Frameworks */,
@@ -297,14 +308,14 @@
 			dependencies = (
 				878D935F28EDCB51001D98DE /* PBXTargetDependency */,
 			);
-			name = "Run ToolsTests";
+			name = RacePaceTests;
 			productName = RunnerToolsTests;
-			productReference = 878D935A28EDCB51001D98DE /* Run ToolsTests.xctest */;
+			productReference = 878D935A28EDCB51001D98DE /* RacePaceTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		87DF7EA228D90D65003D7E9F /* Run Tools */ = {
+		87DF7EA228D90D65003D7E9F /* RacePace */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 87DF7EB128D90D65003D7E9F /* Build configuration list for PBXNativeTarget "Run Tools" */;
+			buildConfigurationList = 87DF7EB128D90D65003D7E9F /* Build configuration list for PBXNativeTarget "RacePace" */;
 			buildPhases = (
 				87DF7E9F28D90D65003D7E9F /* Sources */,
 				87DF7EA028D90D65003D7E9F /* Frameworks */,
@@ -314,9 +325,9 @@
 			);
 			dependencies = (
 			);
-			name = "Run Tools";
+			name = RacePace;
 			productName = RunnerTools;
-			productReference = 87DF7EA328D90D65003D7E9F /* Run Tools.app */;
+			productReference = 87DF7EA328D90D65003D7E9F /* RacePace.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -338,7 +349,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 87DF7E9E28D90D65003D7E9F /* Build configuration list for PBXProject "Run Tools" */;
+			buildConfigurationList = 87DF7E9E28D90D65003D7E9F /* Build configuration list for PBXProject "RacePace" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -351,8 +362,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				87DF7EA228D90D65003D7E9F /* Run Tools */,
-				878D935928EDCB51001D98DE /* Run ToolsTests */,
+				87DF7EA228D90D65003D7E9F /* RacePace */,
+				878D935928EDCB51001D98DE /* RacePaceTests */,
 			);
 		};
 /* End PBXProject section */
@@ -417,6 +428,7 @@
 				876287702947D87800F4AB2D /* TrackMode-ViewModel.swift in Sources */,
 				878D5AEF28E148BC007F2BE7 /* RaceView.swift in Sources */,
 				87ADFE2A28DB475C00B24A8C /* TrainingBlockLengthView.swift in Sources */,
+				875878002948B2C7009FACD2 /* BoldCategoryView.swift in Sources */,
 				87F3E94728E23435008C630F /* TextFieldWithText.swift in Sources */,
 				87C4BD622937E1CE00EA5B60 /* RaceImgLogoPicker.swift in Sources */,
 				87ADFE2828DA44B000B24A8C /* DateCalculatorView.swift in Sources */,
@@ -428,7 +440,7 @@
 				87D23E1A28DCD31E006EE1A3 /* Pace.swift in Sources */,
 				87C4BD642937E44E00EA5B60 /* RaceLogoPickers.swift in Sources */,
 				87B9AB6128DB52A100233CA6 /* DateResult.swift in Sources */,
-				87DF7EA728D90D65003D7E9F /* RunnerToolsApp.swift in Sources */,
+				87DF7EA728D90D65003D7E9F /* RacePaceApp.swift in Sources */,
 				87D23E1528DCA4F7006EE1A3 /* StartDateView.swift in Sources */,
 				8724F451292D253800700C14 /* RaceEditView.swift in Sources */,
 			);
@@ -439,7 +451,7 @@
 /* Begin PBXTargetDependency section */
 		878D935F28EDCB51001D98DE /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 87DF7EA228D90D65003D7E9F /* Run Tools */;
+			target = 87DF7EA228D90D65003D7E9F /* RacePace */;
 			targetProxy = 878D935E28EDCB51001D98DE /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -461,7 +473,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Run Tools.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Run Tools";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RacePace.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/RacePace";
 			};
 			name = Debug;
 		};
@@ -481,7 +493,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Run Tools.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Run Tools";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RacePace.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/RacePace";
 			};
 			name = Release;
 		};
@@ -606,11 +618,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Run\\ Tools/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"RacePace/Preview Content\"";
 				DEVELOPMENT_TEAM = 52XE3E2L4S;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = "Run Tools";
+				INFOPLIST_KEY_CFBundleDisplayName = RacePace;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -637,11 +649,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Run\\ Tools/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"RacePace/Preview Content\"";
 				DEVELOPMENT_TEAM = 52XE3E2L4S;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = "Run Tools";
+				INFOPLIST_KEY_CFBundleDisplayName = RacePace;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -664,7 +676,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		878D936028EDCB51001D98DE /* Build configuration list for PBXNativeTarget "Run ToolsTests" */ = {
+		878D936028EDCB51001D98DE /* Build configuration list for PBXNativeTarget "RacePaceTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				878D936128EDCB51001D98DE /* Debug */,
@@ -673,7 +685,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		87DF7E9E28D90D65003D7E9F /* Build configuration list for PBXProject "Run Tools" */ = {
+		87DF7E9E28D90D65003D7E9F /* Build configuration list for PBXProject "RacePace" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				87DF7EAF28D90D65003D7E9F /* Debug */,
@@ -682,7 +694,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		87DF7EB128D90D65003D7E9F /* Build configuration list for PBXNativeTarget "Run Tools" */ = {
+		87DF7EB128D90D65003D7E9F /* Build configuration list for PBXNativeTarget "RacePace" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				87DF7EB228D90D65003D7E9F /* Debug */,

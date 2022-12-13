@@ -7,22 +7,6 @@
 
 import SwiftUI
 
-struct BoldCategory: View {
-    let beforeColon: String
-    let afterColon: String
-    
-    var body: some View {
-        HStack {
-            Text("\(beforeColon): ")
-                .bold()
-                .foregroundColor(.secondary)
-            Text(afterColon)
-                .foregroundColor(.secondary)
-        }
-        .padding(2)
-    }
-}
-
 struct CalendarStatsView: View {
     
     var vm = DateCalculatorViewModel()
@@ -69,10 +53,10 @@ struct CalendarStatsView: View {
                 .foregroundColor(.secondary)
                 .font(.title3)
             VStack(alignment: .leading) {
-                BoldCategory(beforeColon: "Current Date", afterColon: dateAsString)
-                BoldCategory(beforeColon: "Month", afterColon: monthOfYearRatio)
-                BoldCategory(beforeColon: "Week", afterColon: weekOfYearRatio)
-                BoldCategory(beforeColon: "Remaining Year", afterColon: vm.computeTrainingBlockLength(start: Date(), end: lastDayOfYear).dateResultString)
+                BoldCategoryView(beforeColon: "Current Date", afterColon: dateAsString)
+                BoldCategoryView(beforeColon: "Month", afterColon: monthOfYearRatio)
+                BoldCategoryView(beforeColon: "Week", afterColon: weekOfYearRatio)
+                BoldCategoryView(beforeColon: "Remaining Year", afterColon: vm.computeTrainingBlockLength(start: Date(), end: lastDayOfYear).dateResultString)
             }
         }
         .padding()

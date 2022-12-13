@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "87DF7EA228D90D65003D7E9F"
-               BuildableName = "Run Tools.app"
-               BlueprintName = "Run Tools"
-               ReferencedContainer = "container:Run Tools.xcodeproj">
+               BuildableName = "RacePace.app"
+               BlueprintName = "RacePace"
+               ReferencedContainer = "container:RacePace.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "87DF7EA228D90D65003D7E9F"
-            BuildableName = "Run Tools.app"
-            BlueprintName = "Run Tools"
-            ReferencedContainer = "container:Run Tools.xcodeproj">
+            BuildableName = "RacePace.app"
+            BlueprintName = "RacePace"
+            ReferencedContainer = "container:RacePace.xcodeproj">
          </BuildableReference>
       </CodeCoverageTargets>
       <Testables>
@@ -45,9 +45,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "878D935928EDCB51001D98DE"
-               BuildableName = "Run ToolsTests.xctest"
-               BlueprintName = "Run ToolsTests"
-               ReferencedContainer = "container:Run Tools.xcodeproj">
+               BuildableName = "RacePaceTests.xctest"
+               BlueprintName = "RacePaceTests"
+               ReferencedContainer = "container:RacePace.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -67,9 +67,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "87DF7EA228D90D65003D7E9F"
-            BuildableName = "Run Tools.app"
-            BlueprintName = "Run Tools"
-            ReferencedContainer = "container:Run Tools.xcodeproj">
+            BuildableName = "RacePace.app"
+            BlueprintName = "RacePace"
+            ReferencedContainer = "container:RacePace.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -84,9 +84,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "87DF7EA228D90D65003D7E9F"
-            BuildableName = "Run Tools.app"
-            BlueprintName = "Run Tools"
-            ReferencedContainer = "container:Run Tools.xcodeproj">
+            BuildableName = "RacePace.app"
+            BlueprintName = "RacePace"
+            ReferencedContainer = "container:RacePace.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
