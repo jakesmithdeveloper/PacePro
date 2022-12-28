@@ -1,5 +1,5 @@
 //
-//  GoalPaceView.swift
+//  GoalTimeView.swift
 //  RunnerTools
 //
 //  Created by Jake Smith on 9/22/22.
@@ -7,10 +7,9 @@
 
 import SwiftUI
 
-struct GoalPaceView: View {
+struct GoalTimeView: View {
 
     @ObservedObject var vm = PaceViewModel()
-    @State private var showingActualFinishTime = false
     
     var body: some View {
         Form {
@@ -25,49 +24,43 @@ struct GoalPaceView: View {
                 }
                 .pickerStyle(.segmented)
                 HStack {
-                    Text("finish time:")
+                    Text("Average Pace:")
                         .font(.caption)
                     Group {
                         TextField("hours", text: $vm.hoursIput)
                         TextField("minutes", text:$vm.minutesInput)
                         TextField("seconds", text: $vm.secondsIput)
+                        Text("/ \(vm.outputUnit)")
                     }
                     .keyboardType(.numberPad)
                 }
-            }
-            
-            Section("output") {
-                Text("\(vm.result) / \(vm.outputUnit)")
                 Picker("Distance Type", selection: $vm.outputUnit) {
                     ForEach(vm.units, id: \.self) {
                         Text("\($0)s")
                     }
                 }
                 .pickerStyle(.segmented)
-                if showingActualFinishTime {
-                    Text("Actual Finish Time: \(vm.actualTimeResult)")
+            }
+            Section("Race Finish Time") {
+                if vm.noInput {
+                    Text("Your race finish time will be calculated using distance and average pace values")
                 } else {
-                    Button("actual finish time") {
-                        withAnimation {
-                            showingActualFinishTime = true
-                        }
-                    }
+                    Text("\(vm.goalTimeResult)")
                 }
             }
         }
         .scrollDismissesKeyboard(.immediately)
-        .navigationTitle("Goal Pace Calculator")
+        .navigationTitle("Finish Time Calculator")
         .onDisappear {
             vm.resetViewModel()
-            showingActualFinishTime = false
         }
     }
 }
 
-struct GoalPaceView_Previews: PreviewProvider {
+struct GoalTimeView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            GoalPaceView()
+            GoalTimeView()            
         }
     }
 }

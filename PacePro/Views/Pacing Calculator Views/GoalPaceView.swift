@@ -1,5 +1,5 @@
 //
-//  GoalTimeView.swift
+//  GoalPaceView.swift
 //  RunnerTools
 //
 //  Created by Jake Smith on 9/22/22.
@@ -7,9 +7,10 @@
 
 import SwiftUI
 
-struct GoalTimeView: View {
+struct GoalPaceView: View {
 
     @ObservedObject var vm = PaceViewModel()
+    @State private var showingActualFinishTime = false
     
     var body: some View {
         Form {
@@ -24,39 +25,53 @@ struct GoalTimeView: View {
                 }
                 .pickerStyle(.segmented)
                 HStack {
-                    Text("Average Pace:")
+                    Text("finish time:")
                         .font(.caption)
                     Group {
                         TextField("hours", text: $vm.hoursIput)
                         TextField("minutes", text:$vm.minutesInput)
                         TextField("seconds", text: $vm.secondsIput)
-                        Text("/ \(vm.outputUnit)")
                     }
                     .keyboardType(.numberPad)
                 }
-                Picker("Distance Type", selection: $vm.outputUnit) {
-                    ForEach(vm.units, id: \.self) {
-                        Text("\($0)s")
+            }
+            
+            Section("Goal Pace") {
+                if vm.noInput {
+                    Text("Your goal pace will be calculated using distance and finish time values")
+                } else {
+                    Text("\(vm.result) / \(vm.outputUnit)")
+                    Picker("Distance Type", selection: $vm.outputUnit) {
+                        ForEach(vm.units, id: \.self) {
+                            Text("\($0)s")
+                        }
+                    }
+                    .pickerStyle(.segmented)
+                    if showingActualFinishTime {
+                        Text("Actual Finish Time: \(vm.actualTimeResult)")
+                    } else {
+                        Button("actual finish time") {
+                            withAnimation {
+                                showingActualFinishTime = true
+                            }
+                        }
                     }
                 }
-                .pickerStyle(.segmented)
-            }
-            Section("output") {
-                Text("\(vm.goalTimeResult)")
             }
         }
         .scrollDismissesKeyboard(.immediately)
-        .navigationTitle("Finish Time Calculator")
+        .navigationTitle("Goal Pace Calculator")
         .onDisappear {
             vm.resetViewModel()
+            showingActualFinishTime = false
         }
     }
 }
 
-struct GoalTimeView_Previews: PreviewProvider {
+struct GoalPaceView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            GoalTimeView()            
+            GoalPaceView()
         }
     }
 }

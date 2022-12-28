@@ -73,6 +73,10 @@ class PaceViewModel: ObservableObject {
         return pace.paceString
     }
     
+    var noInput: Bool {
+        return distanceInput == "" || timeFormatToSeconds(hours: hours, minutes: minutes, seconds: seconds) == 0
+    }
+    
     func milesToKilometers(_ miles: Double) -> Double {
         return miles * 1.60934
     }

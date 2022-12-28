@@ -45,7 +45,7 @@
 		87D23E1A28DCD31E006EE1A3 /* Pace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87D23E1928DCD31E006EE1A3 /* Pace.swift */; };
 		87D23E1C28DCD657006EE1A3 /* PaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87D23E1B28DCD657006EE1A3 /* PaceView.swift */; };
 		87D23E2028DCDB70006EE1A3 /* GoalPaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87D23E1F28DCDB70006EE1A3 /* GoalPaceView.swift */; };
-		87DF7EA728D90D65003D7E9F /* RacePaceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DF7EA628D90D65003D7E9F /* RacePaceApp.swift */; };
+		87DF7EA728D90D65003D7E9F /* PaceProApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DF7EA628D90D65003D7E9F /* PaceProApp.swift */; };
 		87DF7EA928D90D65003D7E9F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DF7EA828D90D65003D7E9F /* ContentView.swift */; };
 		87DF7EAB28D90D65003D7E9F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87DF7EAA28D90D65003D7E9F /* Assets.xcassets */; };
 		87DF7EAE28D90D65003D7E9F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87DF7EAD28D90D65003D7E9F /* Preview Assets.xcassets */; };
@@ -81,7 +81,7 @@
 		878C0463293F988C00B91EF0 /* CalendarStatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarStatsView.swift; sourceTree = "<group>"; };
 		878D5AEE28E148BC007F2BE7 /* RaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceView.swift; sourceTree = "<group>"; };
 		878D5AF028E14958007F2BE7 /* Race-CoreDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Race-CoreDataHelper.swift"; sourceTree = "<group>"; };
-		878D935A28EDCB51001D98DE /* RacePaceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RacePaceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		878D935A28EDCB51001D98DE /* PaceProTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PaceProTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		878D935C28EDCB51001D98DE /* RunnerToolsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunnerToolsTests.swift; sourceTree = "<group>"; };
 		878D936528EDCE42001D98DE /* RaceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceTests.swift; sourceTree = "<group>"; };
 		878DDA9F29411827006EE526 /* Color-Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color-Extensions.swift"; sourceTree = "<group>"; };
@@ -105,8 +105,8 @@
 		87D23E1928DCD31E006EE1A3 /* Pace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pace.swift; sourceTree = "<group>"; };
 		87D23E1B28DCD657006EE1A3 /* PaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaceView.swift; sourceTree = "<group>"; };
 		87D23E1F28DCDB70006EE1A3 /* GoalPaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalPaceView.swift; sourceTree = "<group>"; };
-		87DF7EA328D90D65003D7E9F /* RacePace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RacePace.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		87DF7EA628D90D65003D7E9F /* RacePaceApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RacePaceApp.swift; sourceTree = "<group>"; };
+		87DF7EA328D90D65003D7E9F /* PacePro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PacePro.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		87DF7EA628D90D65003D7E9F /* PaceProApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaceProApp.swift; sourceTree = "<group>"; };
 		87DF7EA828D90D65003D7E9F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		87DF7EAA28D90D65003D7E9F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		87DF7EAD28D90D65003D7E9F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -255,7 +255,7 @@
 		87DF7E9A28D90D65003D7E9F = {
 			isa = PBXGroup;
 			children = (
-				87DF7EA528D90D65003D7E9F /* RacePace */,
+				87DF7EA528D90D65003D7E9F /* PacePro */,
 				878D935B28EDCB51001D98DE /* RacePaceTests */,
 				87DF7EA428D90D65003D7E9F /* Products */,
 			);
@@ -264,16 +264,16 @@
 		87DF7EA428D90D65003D7E9F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				87DF7EA328D90D65003D7E9F /* RacePace.app */,
-				878D935A28EDCB51001D98DE /* RacePaceTests.xctest */,
+				87DF7EA328D90D65003D7E9F /* PacePro.app */,
+				878D935A28EDCB51001D98DE /* PaceProTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		87DF7EA528D90D65003D7E9F /* RacePace */ = {
+		87DF7EA528D90D65003D7E9F /* PacePro */ = {
 			isa = PBXGroup;
 			children = (
-				87DF7EA628D90D65003D7E9F /* RacePaceApp.swift */,
+				87DF7EA628D90D65003D7E9F /* PaceProApp.swift */,
 				875877FE2948B19E009FACD2 /* Extensions */,
 				87ADFE2528DA435200B24A8C /* Models */,
 				87ADFE2428DA434900B24A8C /* Views */,
@@ -281,7 +281,7 @@
 				87DF7EAA28D90D65003D7E9F /* Assets.xcassets */,
 				87DF7EAC28D90D65003D7E9F /* Preview Content */,
 			);
-			path = RacePace;
+			path = PacePro;
 			sourceTree = "<group>";
 		};
 		87DF7EAC28D90D65003D7E9F /* Preview Content */ = {
@@ -295,9 +295,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		878D935928EDCB51001D98DE /* RacePaceTests */ = {
+		878D935928EDCB51001D98DE /* PaceProTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 878D936028EDCB51001D98DE /* Build configuration list for PBXNativeTarget "RacePaceTests" */;
+			buildConfigurationList = 878D936028EDCB51001D98DE /* Build configuration list for PBXNativeTarget "PaceProTests" */;
 			buildPhases = (
 				878D935628EDCB51001D98DE /* Sources */,
 				878D935728EDCB51001D98DE /* Frameworks */,
@@ -308,14 +308,14 @@
 			dependencies = (
 				878D935F28EDCB51001D98DE /* PBXTargetDependency */,
 			);
-			name = RacePaceTests;
+			name = PaceProTests;
 			productName = RunnerToolsTests;
-			productReference = 878D935A28EDCB51001D98DE /* RacePaceTests.xctest */;
+			productReference = 878D935A28EDCB51001D98DE /* PaceProTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		87DF7EA228D90D65003D7E9F /* RacePace */ = {
+		87DF7EA228D90D65003D7E9F /* PacePro */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 87DF7EB128D90D65003D7E9F /* Build configuration list for PBXNativeTarget "RacePace" */;
+			buildConfigurationList = 87DF7EB128D90D65003D7E9F /* Build configuration list for PBXNativeTarget "PacePro" */;
 			buildPhases = (
 				87DF7E9F28D90D65003D7E9F /* Sources */,
 				87DF7EA028D90D65003D7E9F /* Frameworks */,
@@ -325,9 +325,9 @@
 			);
 			dependencies = (
 			);
-			name = RacePace;
+			name = PacePro;
 			productName = RunnerTools;
-			productReference = 87DF7EA328D90D65003D7E9F /* RacePace.app */;
+			productReference = 87DF7EA328D90D65003D7E9F /* PacePro.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -349,7 +349,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 87DF7E9E28D90D65003D7E9F /* Build configuration list for PBXProject "RacePace" */;
+			buildConfigurationList = 87DF7E9E28D90D65003D7E9F /* Build configuration list for PBXProject "PacePro" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -362,8 +362,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				87DF7EA228D90D65003D7E9F /* RacePace */,
-				878D935928EDCB51001D98DE /* RacePaceTests */,
+				87DF7EA228D90D65003D7E9F /* PacePro */,
+				878D935928EDCB51001D98DE /* PaceProTests */,
 			);
 		};
 /* End PBXProject section */
@@ -440,7 +440,7 @@
 				87D23E1A28DCD31E006EE1A3 /* Pace.swift in Sources */,
 				87C4BD642937E44E00EA5B60 /* RaceLogoPickers.swift in Sources */,
 				87B9AB6128DB52A100233CA6 /* DateResult.swift in Sources */,
-				87DF7EA728D90D65003D7E9F /* RacePaceApp.swift in Sources */,
+				87DF7EA728D90D65003D7E9F /* PaceProApp.swift in Sources */,
 				87D23E1528DCA4F7006EE1A3 /* StartDateView.swift in Sources */,
 				8724F451292D253800700C14 /* RaceEditView.swift in Sources */,
 			);
@@ -451,7 +451,7 @@
 /* Begin PBXTargetDependency section */
 		878D935F28EDCB51001D98DE /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 87DF7EA228D90D65003D7E9F /* RacePace */;
+			target = 87DF7EA228D90D65003D7E9F /* PacePro */;
 			targetProxy = 878D935E28EDCB51001D98DE /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -473,7 +473,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RacePace.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/RacePace";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PacePro.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PacePro";
 			};
 			name = Debug;
 		};
@@ -493,7 +493,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RacePace.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/RacePace";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PacePro.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PacePro";
 			};
 			name = Release;
 		};
@@ -618,11 +618,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"RacePace/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"PacePro/Preview Content\"";
 				DEVELOPMENT_TEAM = 52XE3E2L4S;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = RacePace;
+				INFOPLIST_KEY_CFBundleDisplayName = PacePro;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -649,11 +649,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"RacePace/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"PacePro/Preview Content\"";
 				DEVELOPMENT_TEAM = 52XE3E2L4S;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = RacePace;
+				INFOPLIST_KEY_CFBundleDisplayName = PacePro;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -676,7 +676,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		878D936028EDCB51001D98DE /* Build configuration list for PBXNativeTarget "RacePaceTests" */ = {
+		878D936028EDCB51001D98DE /* Build configuration list for PBXNativeTarget "PaceProTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				878D936128EDCB51001D98DE /* Debug */,
@@ -685,7 +685,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		87DF7E9E28D90D65003D7E9F /* Build configuration list for PBXProject "RacePace" */ = {
+		87DF7E9E28D90D65003D7E9F /* Build configuration list for PBXProject "PacePro" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				87DF7EAF28D90D65003D7E9F /* Debug */,
@@ -694,7 +694,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		87DF7EB128D90D65003D7E9F /* Build configuration list for PBXNativeTarget "RacePace" */ = {
+		87DF7EB128D90D65003D7E9F /* Build configuration list for PBXNativeTarget "PacePro" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				87DF7EB228D90D65003D7E9F /* Debug */,

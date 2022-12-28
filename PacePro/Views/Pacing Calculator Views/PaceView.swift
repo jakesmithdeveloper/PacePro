@@ -66,9 +66,9 @@ struct PaceView: View {
                     if showingExplanation {
                         VStack(alignment: .center) {
                             Group {
-                                BoldCategory(beforeColon: "Goal Pace", afterColon: "Calculate the average pace needed to finish a race in the given time")
-                                BoldCategory(beforeColon: "Finish Time", afterColon: "Calculate the total time of the race for a given average pace")
-                                BoldCategory(beforeColon: "Track Workout", afterColon: "Calculate splits for track workouts given a target pace")
+                                BoldCategoryView(beforeColon: "Goal Pace", afterColon: "Calculate the average pace needed to finish a race in the given time")
+                                BoldCategoryView(beforeColon: "Finish Time", afterColon: "Calculate the total time of the race for a given average pace")
+                                BoldCategoryView(beforeColon: "Track Workout", afterColon: "Calculate splits for track workouts given a target pace")
                             }
                             .font(.footnote)
                         }

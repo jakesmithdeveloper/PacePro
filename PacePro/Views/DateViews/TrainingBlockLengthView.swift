@@ -32,7 +32,6 @@ struct TrainingBlockLengthView: View {
                         CalendarView(start: vm.startDate, end: vm.raceDate)
                     }
                 }
-                
             }
         }
         .navigationTitle("Training Block Length")
