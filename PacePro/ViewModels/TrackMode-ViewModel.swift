@@ -47,7 +47,7 @@ extension TrackModePaceView {
         }
         
         func metersToMiles(meters: Int) -> Double {
-            return Double(meters) * 0.000621371
+            return Double(meters) / 1609
         }
         
         func metersToKm(meters: Int) -> Int {

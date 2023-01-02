@@ -25,7 +25,7 @@ struct StartDateView: View {
             }
 
             Section("Training Start Date") {
-                Text("Start Date: \(vm.startDateResult)")
+                Text("\(vm.startDateResult)")
                     .font(.title3)
                     .bold()
             }

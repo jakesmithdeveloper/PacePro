@@ -20,14 +20,14 @@ class DateCalculatorViewModel: ObservableObject {
     var startDateResult: String {
         guard let weeks = Int(trainingBlockLength) else {  return "" }
         guard let date = computeStartDate(raceDate: raceDate, trainingLength: weeks) else { return "" }
-        return dateToString(date)
+        return "Start Date: \(dateToString(date))"
     }
     
     var raceDateResult: String {
         guard let weeks = Int(trainingBlockLength) else {  return "" }
         guard let date = computeRaceDate(startDate: startDate, trainingLength: weeks) else { return "" }
         
-        return dateToString(date)
+        return "Race Date: \(dateToString(date))"
     }
     
     func computeTrainingBlockLength(start: Date, end: Date) -> DateResult {

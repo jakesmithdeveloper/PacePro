@@ -24,7 +24,7 @@ struct RaceDateView: View {
             }
             
             Section("Race Date") {
-                Text("Race Date: \(vm.raceDateResult)")
+                Text("\(vm.raceDateResult)")
                     .font(.title3)
                     .bold()
             }
