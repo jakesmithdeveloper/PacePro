@@ -36,7 +36,7 @@ struct CalendarStatsView: View {
     }
     
     var weekOfYearRatio: String {
-        let weekOfYear = Calendar.current.component(.weekOfYear, from: Date()) - 1
+        let weekOfYear = Calendar.current.component(.weekOfYear, from: Date())
         return "\(weekOfYear) of 52"
     }
     
