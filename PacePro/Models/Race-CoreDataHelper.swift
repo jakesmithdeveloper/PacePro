@@ -26,10 +26,6 @@ extension Race {
         website ?? ""
     }
     
-    var raceImgUrl: String {
-        imgUrl ?? ""
-    }
-    
     var raceUnit: String {
         unit ?? "miles"
     }

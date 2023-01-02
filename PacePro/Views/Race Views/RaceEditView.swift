@@ -62,7 +62,7 @@ struct RaceEditView: View {
         .alert("Race URL", isPresented: $showingUrlAlert, actions: {
             Button("ok", role: .cancel) {}
         }, message: {
-            Text("The race url is used for creating a link to the race page, as well as displaying the race's preview image")
+            Text("The race url is used for creating a link to the race page")
         })
         .sheet(isPresented: $showingColorPicker) {
             RaceLogoPickers(vm: vm)

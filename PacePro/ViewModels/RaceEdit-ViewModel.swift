@@ -17,15 +17,10 @@ class RaceEditViewModel: ObservableObject {
     @Published var name: String
     @Published var date: Date
     @Published var website: String
-    @Published var imgURL: String
     @Published var logoBackgroundColor: String
     @Published var logoTextColor: String
     @Published var logoSfSymbol: String
     @Published var requests = Set<AnyCancellable>()
-    
-    var raceUrl: URL? {
-        return URL(string: "https://vx438we1rd.execute-api.us-east-1.amazonaws.com/production/api?url=\(website)")
-    }
     
     var raceYearString: String {
         guard let yearInt = Calendar.current.dateComponents([.year], from: date).year else { return "" }
@@ -45,7 +40,6 @@ class RaceEditViewModel: ObservableObject {
         _name = Published(wrappedValue: race.raceName)
         _date = Published(wrappedValue: race.raceDate)
         _website = Published(wrappedValue: race.raceWebsite)
-        _imgURL = Published(wrappedValue: race.raceImgUrl)
         _logoBackgroundColor = Published(wrappedValue: race.racelogoBackgroundColor)
         _logoTextColor = Published(wrappedValue: race.raceLogoTextColor)
         _logoSfSymbol = Published(wrappedValue: race.raceLogoSfSymbol)
@@ -72,23 +66,6 @@ class RaceEditViewModel: ObservableObject {
         race.logoBackgroundColor = logoBackgroundColor
         race.logoTextColor = logoTextColor
         race.logoSfSymbol = logoSfSymbol
-    }
-    
-    func updateWithPhoto() {
-        race.objectWillChange.send()
-        race.name = name
-        race.date = date
-        race.website = website
-        race.logoBackgroundColor = logoBackgroundColor
-        race.logoTextColor = logoTextColor
-        race.logoSfSymbol = logoSfSymbol
-        race.edit = false
-        if let raceUrl = raceUrl {
-            fetch(raceUrl, defaultValue: OpenGraphData.example) { data in
-                self.race.imgUrl = data.image
-                self.imgURL = data.image
-            }
-        }
     }
 }
 

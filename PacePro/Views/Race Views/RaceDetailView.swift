@@ -18,31 +18,13 @@ struct RaceDetailView: View {
     
     var body: some View {
         Form {
-            Section("Race information") {
-                if vm.imgURL == "" || vm.imgURL == "no-image" {
-                    // if the user doesn't put a race url or if there is no og:image tag found
-                    HStack {
-                        Spacer()
-                        RaceImgPlaceholderView(raceName: race.raceName, backgroundColor: race.racelogoBackgroundColor, textColor: race.raceLogoTextColor, logo: race.raceLogoSfSymbol, editMode: false)
-                            .padding()
-                        Spacer()
-                    }
-                } else {
-                    AsyncImage(url: URL(string: vm.imgURL)!) { img in
-                        img
-                            .resizable()
-                            .scaledToFit()
-                            
-                    } placeholder: {
-                        HStack {
-                            Spacer()
-                            RaceImgPlaceholderView(raceName: race.raceName, backgroundColor: race.racelogoBackgroundColor, textColor: race.raceLogoTextColor, logo: race.raceLogoSfSymbol, editMode: false)
-                                .padding()
-                            Spacer()
-                        }
-                    }
+            Section("Race information") {   
+                HStack {
+                    Spacer()
+                    RaceImgPlaceholderView(raceName: race.raceName, backgroundColor: race.racelogoBackgroundColor, textColor: race.raceLogoTextColor, logo: race.raceLogoSfSymbol, editMode: false)
+                        .padding()
+                    Spacer()
                 }
-                
                 HStack {
                     Text("Name: ")
                     Text(race.raceName)

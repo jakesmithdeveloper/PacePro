@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		87061F3128EC5E73009FE969 /* OpenGraphData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87061F3028EC5E73009FE969 /* OpenGraphData.swift */; };
 		8724F44F292D1E3300700C14 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8724F44E292D1E3300700C14 /* DateExtension.swift */; };
 		8724F451292D253800700C14 /* RaceEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8724F450292D253800700C14 /* RaceEditView.swift */; };
 		87297C9928DDF142001550C1 /* Main.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 87297C9728DDF142001550C1 /* Main.xcdatamodeld */; };
@@ -66,7 +65,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		87061F3028EC5E73009FE969 /* OpenGraphData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenGraphData.swift; sourceTree = "<group>"; };
 		8724F44E292D1E3300700C14 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		8724F450292D253800700C14 /* RaceEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceEditView.swift; sourceTree = "<group>"; };
 		87297C9828DDF142001550C1 /* Main.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Main.xcdatamodel; sourceTree = "<group>"; };
@@ -221,7 +219,6 @@
 				87297C9A28DDF18A001550C1 /* DataController.swift */,
 				87B9AB6028DB52A100233CA6 /* DateResult.swift */,
 				87297C9728DDF142001550C1 /* Main.xcdatamodeld */,
-				87061F3028EC5E73009FE969 /* OpenGraphData.swift */,
 				87D23E1928DCD31E006EE1A3 /* Pace.swift */,
 				878D5AF028E14958007F2BE7 /* Race-CoreDataHelper.swift */,
 			);
@@ -435,7 +432,6 @@
 				87DF7EA928D90D65003D7E9F /* ContentView.swift in Sources */,
 				878DDAA229413410006EE526 /* TrackModePaceView.swift in Sources */,
 				87297C9B28DDF18A001550C1 /* DataController.swift in Sources */,
-				87061F3128EC5E73009FE969 /* OpenGraphData.swift in Sources */,
 				8752D18728E72BA100C47317 /* Calendar-ViewModel.swift in Sources */,
 				87D23E1A28DCD31E006EE1A3 /* Pace.swift in Sources */,
 				87C4BD642937E44E00EA5B60 /* RaceLogoPickers.swift in Sources */,

@@ -31,7 +31,7 @@ struct RaceView: View {
         }
         .toolbar {
             Button(editMode ? "done" : "edit") {
-                vm.updateWithPhoto()
+                vm.update()
                 
                 withAnimation {
                     editMode.toggle()
