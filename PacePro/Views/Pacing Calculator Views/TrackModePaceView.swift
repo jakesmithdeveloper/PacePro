@@ -30,14 +30,14 @@ struct TrackModePaceView: View {
                 HStack {
                     Text("Average Pace:")
                         .font(.caption)
-                    Group {
-                        TextField("minutes", text: $vm.minutesString)
-                            .keyboardType(.numberPad)
-                        TextField("seconds", text: $vm.secondsString)
-                            .keyboardType(.numberPad)
-                            
-                    }
-                    .keyboardType(.numberPad)
+                    TextField("minutes", text: $vm.minutesString)
+                        .keyboardType(.numberPad)
+                        .frame(maxWidth: 64)
+                    Text(":")
+                    TextField("seconds", text: $vm.secondsString)
+                        .frame(maxWidth: 96)
+                        .keyboardType(.numberPad)
+                    Text("/ \(vm.outputUnit)")
                 }
                 Picker("Distance Type", selection: $vm.outputUnit) {
                     ForEach(units, id: \.self) {

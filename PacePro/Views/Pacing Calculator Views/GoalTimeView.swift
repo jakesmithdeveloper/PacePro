@@ -15,7 +15,7 @@ struct GoalTimeView: View {
         Form {
             Section("User Input") {
                 PresetDistanceView(vm: vm)
-                TextField("distance", text: $vm.distanceInput)
+                TextFieldWithText(userInput: $vm.distanceInput, prompt: "Distance:", placeholder: "enter distance")
                     .keyboardType(.decimalPad)
                 Picker("Distance Type", selection: $vm.inputUnit) {
                     ForEach(vm.units, id: \.self) {
@@ -28,7 +28,9 @@ struct GoalTimeView: View {
                         .font(.caption)
                     Group {
                         TextField("hours", text: $vm.hoursIput)
+                        Text(":")
                         TextField("minutes", text:$vm.minutesInput)
+                        Text(":")
                         TextField("seconds", text: $vm.secondsIput)
                         Text("/ \(vm.outputUnit)")
                     }

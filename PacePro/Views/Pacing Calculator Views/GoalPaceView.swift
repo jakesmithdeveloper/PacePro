@@ -29,7 +29,9 @@ struct GoalPaceView: View {
                         .font(.caption)
                     Group {
                         TextField("hours", text: $vm.hoursIput)
+                        Text(":")
                         TextField("minutes", text:$vm.minutesInput)
+                        Text(":")
                         TextField("seconds", text: $vm.secondsIput)
                     }
                     .keyboardType(.numberPad)

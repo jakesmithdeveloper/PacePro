@@ -18,8 +18,13 @@ struct RaceDateView: View {
                     .datePickerStyle(.compact)
                 HStack {
                     Text("training plan length:")
+                        .lineLimit(1)
                     TextField("Training Plan Length", text: $vm.trainingBlockLength, prompt: Text("(weeks)"))
+                        .frame(maxWidth: 64)
                         .keyboardType(.numberPad)
+                    if vm.trainingBlockLength != "" {
+                        Text("(weeks)")
+                    }
                 }
             }
             
