@@ -51,7 +51,8 @@ struct TrackModePaceView: View {
                 Text("\(vm.resultString)")
                 if vm.cantCalculate == false {
                     if showingSplits {
-                        Stepper("splits at every \(vm.split) meters", value: $vm.split, step: 100)
+                        
+                        Stepper("splits at every \(vm.split) meters", value: $vm.split, in: 100...vm.distance, step: 100)
                         List {
                             ForEach(Array(stride(from: vm.split, through: vm.distance, by: vm.split)), id: \.self) { split in
                                 Text("\(String(split)) : \(vm.timeAtSplit(distance: split, paceInSeconds: vm.paceInSeconds))")
