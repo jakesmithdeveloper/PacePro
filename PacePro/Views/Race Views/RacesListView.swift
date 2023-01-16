@@ -45,6 +45,7 @@ struct RacesListView: View {
                             Section("Past Races") {
                                 ForEach(pastRaces.wrappedValue) { race in
                                     NavigationLink("\(race.raceName) (\(race.raceDateString!))", value: race)
+                                        .lineLimit(1)
                                 }
                                 .onDelete { offsets in
                                     for offset in offsets {
