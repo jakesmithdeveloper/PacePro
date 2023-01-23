@@ -42,7 +42,7 @@ extension TrackModePaceView {
             if cantCalculate {
                 return "Enter Distance and Pace to calculate split time"
             } else {
-                return("\(distance) at \(time)")
+                return("\(distance) meters at \(time)")
             }
         }
         
@@ -61,7 +61,7 @@ extension TrackModePaceView {
         func totalSecondsToTime(seconds: Int) -> String {
             let minutes = Int(seconds) / 60 % 60
             let seconds = Int(seconds) % 60
-            return ("\(minutes > 0 ? "\(String(minutes)):" : "")\(seconds >= 10 ? String(seconds) : "0\(String(seconds))")")
+            return ("\(minutes > 0 ? "\(String(minutes)):" : "00:")\(seconds >= 10 ? String(seconds) : "0\(String(seconds))")")
         }
         
         func timeAtSplit(distance: Int, paceInSeconds: Int) -> String {
@@ -75,6 +75,11 @@ extension TrackModePaceView {
             return totalSecondsToTime(seconds: Int(secondsResult))
         }
         
+        func reset() {
+            distanceString = ""
+            minutesString = ""
+            secondsString = ""
+        }
         
     }
 }
