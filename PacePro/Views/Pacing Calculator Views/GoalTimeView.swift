@@ -56,6 +56,11 @@ struct GoalTimeView: View {
         .onDisappear {
             vm.resetViewModel()
         }
+        .toolbar {
+            Button("Reset") {
+                vm.resetViewModel()
+            }
+        }
     }
 }
 

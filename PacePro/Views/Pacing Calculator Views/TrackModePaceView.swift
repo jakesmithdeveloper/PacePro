@@ -50,18 +50,19 @@ struct TrackModePaceView: View {
             Section("Result") {
                 Text("\(vm.resultString)")
                 if vm.cantCalculate == false {
-                    if showingSplits {
-                        
+                    if showingSplits && vm.distance > 100 {
                         Stepper("splits at every \(vm.split) meters", value: $vm.split, in: 100...vm.distance, step: 100)
                         List {
                             ForEach(Array(stride(from: vm.split, through: vm.distance, by: vm.split)), id: \.self) { split in
-                                Text("\(String(split)) : \(vm.timeAtSplit(distance: split, paceInSeconds: vm.paceInSeconds))")
+                                Text("\(String(split)) meters at \(vm.timeAtSplit(distance: split, paceInSeconds: vm.paceInSeconds))")
                             }
                         }
                     }
-                    Button("\(showingSplits ? "hide" : "show") splits") {
-                        withAnimation {
-                            showingSplits.toggle()
+                    if vm.distance > 100 {
+                        Button("\(showingSplits ? "hide" : "show") splits") {
+                            withAnimation {
+                                showingSplits.toggle()
+                            }
                         }
                     }
                 }
@@ -69,6 +70,11 @@ struct TrackModePaceView: View {
         }
         .scrollDismissesKeyboard(.immediately)
         .navigationTitle("Track Calculator")
+        .toolbar {
+            Button("Reset") {
+                vm.reset()
+            }
+        }
     }
 }
 

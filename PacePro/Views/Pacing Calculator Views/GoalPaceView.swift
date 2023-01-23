@@ -67,6 +67,11 @@ struct GoalPaceView: View {
             vm.resetViewModel()
             showingActualFinishTime = false
         }
+        .toolbar {
+            Button("Reset") {
+                vm.resetViewModel()
+            }
+        }
     }
 }
 
