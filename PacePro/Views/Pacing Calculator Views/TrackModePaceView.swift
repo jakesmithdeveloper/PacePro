@@ -22,7 +22,6 @@ struct TrackModePaceView: View {
                 HStack {
                     TextFieldWithText(userInput: $vm.distanceString, prompt: "Distance:", placeholder: "400m")
                         .keyboardType(.numberPad)
-                    Text("/ meters")
                 }
             }
             
