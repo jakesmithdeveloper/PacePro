@@ -7,16 +7,16 @@
 
 import CoreData
 import XCTest
-@testable import RunnerTools
+//@testable import RunnerTools
 
-class BaseTestCase: XCTestCase {
-    
-    var dataController: DataController!
-    var managedObjectContext: NSManagedObjectContext!
-    
-    override func setUpWithError() throws {
-        dataController = DataController(inMemory: true)
-        managedObjectContext = dataController.container.viewContext
-    }
-    
-}
+//class BaseTestCase: XCTestCase {
+//    
+//    var dataController: DataController!
+//    var managedObjectContext: NSManagedObjectContext!
+//    
+//    override func setUpWithError() throws {
+//        dataController = DataController(inMemory: true)
+//        managedObjectContext = dataController.container.viewContext
+//    }
+//    
+//}
