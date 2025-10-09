@@ -16,7 +16,7 @@ struct CalendarKeyView: View {
             Text("start date")
                 .font(.caption2)
             Capsule()
-                .fill(.blue)
+                .fill(AppTheme.primaryAccent)
                 .frame(width: 16, height: 16)
             Text("or")
                 .font(.caption2)
@@ -25,7 +25,7 @@ struct CalendarKeyView: View {
                 .foregroundColor(.white)
                 .overlay {
                     RoundedRectangle(cornerRadius: 10)
-                        .stroke(.blue, lineWidth: 1)
+                        .stroke(AppTheme.primaryAccent, lineWidth: 1)
                 }
             Text("training block")
                 .font(.caption2)

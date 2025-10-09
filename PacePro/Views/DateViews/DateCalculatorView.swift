@@ -8,52 +8,62 @@
 import SwiftUI
 
 struct DateCalculatorView: View {
-
-    @Environment(\.colorScheme) var colorScheme
     
     var body: some View {
         NavigationView {
             ScrollView {
-                VStack() {
-                    Group {
-                        NavigationLink {
-                            TrainingBlockLengthView()
-                        } label: {
-                            Label("Training Block Length", systemImage: "calendar.circle")
-                                .foregroundColor(.white)
-                        }
-                        
-                        NavigationLink {
-                            StartDateView()
-                        } label: {
-                            Label("Training Start Date", systemImage: "figure.run")
-                                .foregroundColor(.white)
-                        }
-                        
-                        NavigationLink {
-                            RaceDateView()
-                        } label: {
-                            Label("Race Date Calculator", systemImage: "flag.checkered")
-                                .foregroundColor(.white)
+                VStack(spacing: AppTheme.cardSpacing) {
+                    NavigationLink {
+                        TrainingBlockLengthView()
+                    } label: {
+                        HStack {
+                            Image(systemName: "calendar.circle")
+                                .font(.title2)
+                            Text("Training Block Length")
+                            Spacer()
+                            Image(systemName: "chevron.right")
+                                .font(.caption)
+                                .fontWeight(.bold)
                         }
                     }
-                    .font(.title)
-                    .padding()
-                    .frame(maxWidth: .infinity)
-                    .background {
-                        RoundedRectangle(cornerRadius: 20)
-                            .fill(.blue)
-                    }
-                    .padding()
+                    .navigationCardStyle()
                     
+                    NavigationLink {
+                        StartDateView()
+                    } label: {
+                        HStack {
+                            Image(systemName: "figure.run")
+                                .font(.title2)
+                            Text("Training Start Date")
+                            Spacer()
+                            Image(systemName: "chevron.right")
+                                .font(.caption)
+                                .fontWeight(.bold)
+                        }
+                    }
+                    .navigationCardStyle()
+                    
+                    NavigationLink {
+                        RaceDateView()
+                    } label: {
+                        HStack {
+                            Image(systemName: "flag.checkered")
+                                .font(.title2)
+                            Text("Race Date Calculator")
+                            Spacer()
+                            Image(systemName: "chevron.right")
+                                .font(.caption)
+                                .fontWeight(.bold)
+                        }
+                    }
+                    .navigationCardStyle()
                     
                     CalendarStatsView()
-                    
+                        .padding(.top, 8)
                 }
+                .padding()
             }
             .navigationTitle("Date Calculators")
-
-
         }
     }
 }
