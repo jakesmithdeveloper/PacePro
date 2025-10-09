@@ -39,7 +39,7 @@ struct CalendarCellView: View {
                 .frame(maxWidth: .infinity, minHeight: 32)
                 .foregroundColor(.white)
                 .background {
-                    Color.blue
+                    AppTheme.primaryAccent
                         .cornerRadius(10)
                 }
                 .padding(2)
@@ -50,7 +50,7 @@ struct CalendarCellView: View {
                 .foregroundColor(.gray)
                 .overlay {
                     RoundedRectangle(cornerRadius: 10)
-                        .stroke(.blue, lineWidth: 1)
+                        .stroke(AppTheme.primaryAccent, lineWidth: 1)
                 }
                 .padding(2)
             
@@ -60,7 +60,7 @@ struct CalendarCellView: View {
                 .foregroundColor(.gray)
                 .overlay {
                     RoundedRectangle(cornerRadius: 10)
-                        .stroke(.blue, lineWidth: 1)
+                        .stroke(AppTheme.primaryAccent, lineWidth: 1)
                 }
                 .padding(2)
             

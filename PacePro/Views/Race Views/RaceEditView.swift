@@ -47,7 +47,7 @@ struct RaceEditView: View {
                 
                 HStack {
                     Image(systemName: "questionmark.circle")
-                        .foregroundColor(colorScheme == .dark ? .primary : .blue)
+                        .foregroundColor(AppTheme.primaryAccent)
                         .onTapGesture {
                             showingUrlAlert = true
                         }

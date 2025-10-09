@@ -14,37 +14,32 @@ extension View {
 }
 
 struct PaceCalcNavButton: ViewModifier {
-    
-    @Environment(\.colorScheme) var colorScheme
-    
     func body(content: Content) -> some View {
         content
-            .bold()
-            .foregroundColor(colorScheme == .dark ? .primary : .blue)
-            .padding(20)
-            .frame(maxWidth: .infinity)
-            .font(.title)
-            .overlay {
-                RoundedRectangle(cornerRadius: 20)
-                    .stroke(.blue, lineWidth: 5)
-            }
-            .padding()
+            .navigationCardStyle()
     }
 }
 
 struct PaceView: View {
     
-    @Environment(\.colorScheme) var colorScheme
     @State private var showingExplanation = true
     
     var body: some View {
         NavigationView {
             ScrollView {
-                VStack(alignment: .center) {
+                VStack(spacing: AppTheme.cardSpacing) {
                     NavigationLink {
                         GoalPaceView()
                     } label: {
-                        Label("Goal Pace", systemImage: "figure.run")
+                        HStack {
+                            Image(systemName: "figure.run")
+                                .font(.title2)
+                            Text("Goal Pace")
+                            Spacer()
+                            Image(systemName: "chevron.right")
+                                .font(.caption)
+                                .fontWeight(.bold)
+                        }
                     }
                     .paceCalcNav()
                     
@@ -52,48 +47,108 @@ struct PaceView: View {
                     NavigationLink {
                         GoalTimeView()
                     } label: {
-                        Label("Finish Time", systemImage: "clock")
+                        HStack {
+                            Image(systemName: "clock")
+                                .font(.title2)
+                            Text("Finish Time")
+                            Spacer()
+                            Image(systemName: "chevron.right")
+                                .font(.caption)
+                                .fontWeight(.bold)
+                        }
                     }
                     .paceCalcNav()
 
                     NavigationLink {
                         TrackModePaceView()
                     } label: {
-                        Label("Track Workout", systemImage: "stopwatch")
+                        HStack {
+                            Image(systemName: "stopwatch")
+                                .font(.title2)
+                            Text("Track Workout")
+                            Spacer()
+                            Image(systemName: "chevron.right")
+                                .font(.caption)
+                                .fontWeight(.bold)
+                        }
                     }
                     .paceCalcNav()
 
-                    if showingExplanation {
-                        VStack(alignment: .center) {
-                            Group {
-                                BoldCategoryView(beforeColon: "Goal Pace", afterColon: "Calculate the average pace needed to finish a race in the given time")
-                                BoldCategoryView(beforeColon: "Finish Time", afterColon: "Calculate the total time of the race for a given average pace")
-                                BoldCategoryView(beforeColon: "Track Workout", afterColon: "Calculate splits for track workouts given a target pace")
-                            }
-                            .font(.footnote)
-                        }
-                        .padding()
-                        .background {
-                            RoundedRectangle(cornerRadius: 20)
-                                .stroke(.blue, lineWidth: 2)
-                        }
-                        .padding()
-                    }
-                    
-                    Text("\(showingExplanation ? "hide" : "show info  ")")
-                        .onTapGesture {
-                            withAnimation {
+                    // Info Panel
+                    VStack(alignment: .leading, spacing: 12) {
+                        Button(action: {
+                            withAnimation(.spring(response: 0.3, dampingFraction: 0.7)) {
                                 showingExplanation.toggle()
                             }
+                        }) {
+                            HStack {
+                                Image(systemName: "info.circle.fill")
+                                    .foregroundColor(AppTheme.primaryAccent)
+                                Text(showingExplanation ? "Hide Details" : "Show Details")
+                                    .fontWeight(.medium)
+                                Spacer()
+                                Image(systemName: "chevron.down")
+                                    .rotationEffect(.degrees(showingExplanation ? 180 : 0))
+                                    .animation(.spring(response: 0.3, dampingFraction: 0.7), value: showingExplanation)
+                            }
+                            .foregroundColor(AppTheme.primaryAccent)
+                            .padding(.bottom, showingExplanation ? 8 : 0)
                         }
-                        .font(.footnote)
-                        .foregroundColor(.blue)
+                        
+                        if showingExplanation {
+                            VStack(alignment: .leading, spacing: 8) {
+                                InfoRowView(
+                                    icon: "figure.run",
+                                    title: "Goal Pace",
+                                    description: "Calculate the average pace needed to finish a race in the given time"
+                                )
+                                
+                                InfoRowView(
+                                    icon: "clock",
+                                    title: "Finish Time",
+                                    description: "Calculate the total time of the race for a given average pace"
+                                )
+                                
+                                InfoRowView(
+                                    icon: "stopwatch",
+                                    title: "Track Workout",
+                                    description: "Calculate splits for track workouts given a target pace"
+                                )
+                            }
+                        }
+                    }
+                    .cardStyle()
+                    .padding(.top, 8)
                     
                     Spacer()
                 }
-                .padding(.top, 30)
+                .padding()
             }
             .navigationTitle("Pace Calculators")
+        }
+    }
+}
+
+// Helper view for info rows
+struct InfoRowView: View {
+    let icon: String
+    let title: String
+    let description: String
+    
+    var body: some View {
+        HStack(alignment: .top, spacing: 12) {
+            Image(systemName: icon)
+                .foregroundColor(AppTheme.primaryAccent)
+                .frame(width: 24)
+            
+            VStack(alignment: .leading, spacing: 2) {
+                Text(title)
+                    .fontWeight(.semibold)
+                    .foregroundColor(.primary)
+                Text(description)
+                    .font(.caption)
+                    .foregroundColor(.secondary)
+            }
         }
     }
 }

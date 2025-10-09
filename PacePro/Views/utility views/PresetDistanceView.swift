@@ -37,7 +37,7 @@ struct PresetDistanceView: View {
             .bold()
             .foregroundColor(.white)
             .background {
-                Color.blue
+                AppTheme.primaryAccent
             }
             .cornerRadius(10)
         }

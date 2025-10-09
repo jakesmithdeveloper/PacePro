@@ -25,7 +25,7 @@ struct TrackDistancePresets: View {
                             .bold()
                             .foregroundColor(.white)
                             .background {
-                                Color.blue
+                                AppTheme.primaryAccent
                             }
                             .cornerRadius(10)
                             .onTapGesture {

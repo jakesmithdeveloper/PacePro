@@ -47,24 +47,68 @@ struct CalendarStatsView: View {
     
     
     var body: some View {
-        VStack {
-            Text("\(String(Calendar.current.component(.year, from: Date()))) Stats")
-                .bold()
-                .foregroundColor(.secondary)
-                .font(.title3)
-            VStack(alignment: .leading) {
-                BoldCategoryView(beforeColon: "Current Date", afterColon: dateAsString)
-                BoldCategoryView(beforeColon: "Month", afterColon: monthOfYearRatio)
-                BoldCategoryView(beforeColon: "Week", afterColon: weekOfYearRatio)
-                BoldCategoryView(beforeColon: "Remaining Year", afterColon: vm.computeTrainingBlockLength(start: Date(), end: lastDayOfYear).dateResultString)
+        VStack(alignment: .leading, spacing: 12) {
+            HStack {
+                Image(systemName: "calendar.badge.clock")
+                    .foregroundColor(AppTheme.primaryAccent)
+                    .font(.title3)
+                Text("\(String(Calendar.current.component(.year, from: Date()))) Stats")
+                    .font(AppTheme.titleFont)
+                    .fontWeight(.bold)
+            }
+            
+            Divider()
+            
+            VStack(alignment: .leading, spacing: 8) {
+                StatRowView(
+                    icon: "calendar",
+                    label: "Current Date",
+                    value: dateAsString
+                )
+                StatRowView(
+                    icon: "chart.bar.fill",
+                    label: "Month Progress",
+                    value: monthOfYearRatio
+                )
+                StatRowView(
+                    icon: "chart.line.uptrend.xyaxis",
+                    label: "Week Progress",
+                    value: weekOfYearRatio
+                )
+                StatRowView(
+                    icon: "hourglass",
+                    label: "Remaining Year",
+                    value: vm.computeTrainingBlockLength(start: Date(), end: lastDayOfYear).dateResultString
+                )
             }
         }
-        .padding()
-        .background {
-            RoundedRectangle(cornerRadius: 20)
-                .stroke(.blue, lineWidth: 2)
+        .cardStyle()
+    }
+}
+
+// Helper view for stat rows
+struct StatRowView: View {
+    let icon: String
+    let label: String
+    let value: String
+    
+    var body: some View {
+        HStack(spacing: 12) {
+            Image(systemName: icon)
+                .foregroundColor(AppTheme.primaryAccent)
+                .frame(width: 24)
+            
+            VStack(alignment: .leading, spacing: 2) {
+                Text(label)
+                    .font(.caption)
+                    .foregroundColor(.secondary)
+                Text(value)
+                    .fontWeight(.medium)
+                    .foregroundColor(.primary)
+            }
+            
+            Spacer()
         }
-        .padding()
     }
 }
 
